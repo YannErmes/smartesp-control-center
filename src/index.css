@@ -39,13 +39,13 @@
     --secondary: 210 40% 96%;
     --secondary-foreground: 222.2 84% 4.9%;
     --muted: 210 40% 96%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted-foreground: 215.4 16.3% 35%;
     --accent: 196 80% 55%;
     --accent-foreground: 0 0% 98%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
+    --border: 214.3 31.8% 85%;
+    --input: 214.3 31.8% 85%;
     --ring: 222.2 84% 4.9%;
   }
 
@@ -88,7 +88,7 @@
   }
 
   .light-mode .neomorphic {
-    @apply bg-white border border-gray-200 shadow-[5px_5px_10px_rgba(0,0,0,0.1),-5px_-5px_10px_rgba(255,255,255,0.8)];
+    @apply bg-white border border-gray-300 shadow-[5px_5px_10px_rgba(0,0,0,0.15),-5px_-5px_10px_rgba(255,255,255,0.9)];
   }
   
   .neomorphic-inset {
@@ -96,7 +96,7 @@
   }
 
   .light-mode .neomorphic-inset {
-    @apply bg-white border border-gray-200 shadow-[inset_5px_5px_10px_rgba(0,0,0,0.1),inset_-5px_-5px_10px_rgba(255,255,255,0.8)];
+    @apply bg-white border border-gray-300 shadow-[inset_5px_5px_10px_rgba(0,0,0,0.15),inset_-5px_-5px_10px_rgba(255,255,255,0.9)];
   }
   
   .glass-morphism {
@@ -104,7 +104,7 @@
   }
 
   .light-mode .glass-morphism {
-    @apply backdrop-blur-lg bg-black/5 border border-black/10 shadow-[0_8px_32px_0_rgba(0,0,0,0.1)];
+    @apply backdrop-blur-lg bg-black/5 border border-black/15 shadow-[0_8px_32px_0_rgba(0,0,0,0.15)];
   }
   
   .text-gradient-primary {
@@ -121,6 +121,28 @@
 
   .animate-float {
     animation: float 6s ease-in-out infinite;
+  }
+
+  /* Better contrast for light mode text */
+  .light-mode .text-gray-600 {
+    @apply text-gray-700;
+  }
+  
+  .light-mode .text-gray-500 {
+    @apply text-gray-600;
+  }
+  
+  .light-mode .text-gray-400 {
+    @apply text-gray-500;
+  }
+
+  /* Enhanced button contrast in light mode */
+  .light-mode button {
+    @apply font-medium;
+  }
+
+  .light-mode .hover\:text-gray-900:hover {
+    @apply text-gray-800;
   }
 }
 
