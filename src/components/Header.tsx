@@ -52,6 +52,12 @@ const Header = () => {
               {item === 'stp' ? 'STP' : item.charAt(0).toUpperCase() + item.slice(1)}
             </Link>
           ))}
+          <RouterLink 
+            to="/conseils"
+            className="px-3 py-2 rounded-md text-sm uppercase tracking-wider text-gray-300 hover:text-white transition-colors"
+          >
+            Conseils
+          </RouterLink>
         </nav>
 
         <div className="flex items-center gap-2">

@@ -46,7 +46,7 @@ const VideoDemo = () => {
                 className="w-full h-full"
                 poster="/placeholder.svg"
               >
-                <source src="ESP video demo" type="video/mp4" />
+                <source src="https://fe-store.pro/appapk/videos/ESP video demo.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
             </div>
@@ -60,11 +60,15 @@ const VideoDemo = () => {
             <h3 className="text-xl font-semibold mb-4 text-gradient-primary">
               Premier essai en temps réel
             </h3>
-            <div className="aspect-video bg-[#0a0a0a] rounded-lg flex items-center justify-center mb-4 border border-[#333]">
-              <div className="text-center">
-                <Play className="h-16 w-16 text-gray-500 mx-auto mb-4" />
-                <p className="text-gray-400">Vidéo sera disponible prochainement</p>
-              </div>
+            <div className="aspect-video bg-[#0a0a0a] rounded-lg mb-4 border border-[#333] overflow-hidden">
+              <video 
+                controls 
+                className="w-full h-full"
+                poster="/placeholder.svg"
+              >
+                <source src="https://fe-store.pro/appapk/videos/ESP video demo2.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
             </div>
             <p className="text-gray-400 text-sm">
               Regardez SmartESP en action lors d'un test en temps réel avec des modules ESP.

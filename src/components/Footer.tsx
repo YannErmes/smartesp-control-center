@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Link } from 'react-scroll';
+import { Link as RouterLink } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -41,7 +42,7 @@ const Footer = () => {
           <div>
             <h3 className="text-white font-semibold mb-4 text-lg">Liens rapides</h3>
             <ul className="space-y-2 text-gray-400">
-              {['presentation', 'stp', 'avantages', 'galerie', 'conseils'].map((item) => (
+              {['presentation', 'stp', 'avantages', 'galerie'].map((item) => (
                 <li key={item}>
                   <Link
                     to={item}
@@ -55,6 +56,14 @@ const Footer = () => {
                   </Link>
                 </li>
               ))}
+              <li>
+                <RouterLink 
+                  to="/conseils"
+                  className="hover:text-primary transition-colors"
+                >
+                  Conseils
+                </RouterLink>
+              </li>
             </ul>
           </div>
           
