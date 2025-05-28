@@ -8,10 +8,17 @@ import AvantagesSection from '../components/AvantagesSection';
 import GalerieSection from '../components/GalerieSection';
 import DownloadSection from '../components/DownloadSection';
 import Footer from '../components/Footer';
+import { useTheme } from '@/contexts/ThemeContext';
 
 const Index = () => {
+  const { isDarkMode } = useTheme();
+  
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className={`min-h-screen transition-colors duration-300 ${
+      isDarkMode 
+        ? 'bg-background text-foreground' 
+        : 'bg-gray-50 text-gray-900'
+    }`}>
       <Header />
       <HeroSection />
       <PresentationSection />

@@ -3,9 +3,12 @@ import { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { Link } from 'react-scroll';
 import { Link as RouterLink } from 'react-router-dom';
+import ThemeToggle from './ThemeToggle';
+import { useTheme } from '@/contexts/ThemeContext';
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
+  const { isDarkMode } = useTheme();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -26,8 +29,8 @@ const Header = () => {
     <header 
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
         scrolled 
-          ? 'py-2 glass-morphism backdrop-blur-lg' 
-          : 'py-4 bg-transparent'
+          ? `py-2 glass-morphism backdrop-blur-lg ${isDarkMode ? '' : 'bg-white/80 border-b border-gray-200'}` 
+          : `py-4 ${isDarkMode ? 'bg-transparent' : 'bg-white/10'}`
       }`}
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
@@ -47,20 +50,29 @@ const Header = () => {
               smooth={true}
               offset={-80}
               duration={500}
-              className="px-3 py-2 rounded-md text-sm uppercase tracking-wider text-gray-300 hover:text-white cursor-pointer transition-colors"
+              className={`px-3 py-2 rounded-md text-sm uppercase tracking-wider transition-colors cursor-pointer ${
+                isDarkMode 
+                  ? 'text-gray-300 hover:text-white' 
+                  : 'text-gray-600 hover:text-gray-900'
+              }`}
             >
               {item === 'stp' ? 'STP' : item.charAt(0).toUpperCase() + item.slice(1)}
             </Link>
           ))}
           <RouterLink 
             to="/conseils"
-            className="px-3 py-2 rounded-md text-sm uppercase tracking-wider text-gray-300 hover:text-white transition-colors"
+            className={`px-3 py-2 rounded-md text-sm uppercase tracking-wider transition-colors ${
+              isDarkMode 
+                ? 'text-gray-300 hover:text-white' 
+                : 'text-gray-600 hover:text-gray-900'
+            }`}
           >
             Conseils
           </RouterLink>
         </nav>
 
         <div className="flex items-center gap-2">
+          <ThemeToggle size="sm" />
           <RouterLink to="/installation">
             <Button variant="ghost" size="sm" className="hidden md:flex neomorphic hover:neo-glow">
               Documentation

@@ -1,10 +1,11 @@
 
-import React, { useState } from 'react';
+import React from 'react';
 import { Button } from "@/components/ui/button";
-import { Switch } from "@/components/ui/switch";
 import { Link } from "react-router-dom";
-import { ArrowLeft, Moon, Sun } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import ThemeToggle from "@/components/ThemeToggle";
+import { useTheme } from "@/contexts/ThemeContext";
 
 interface ConseilProps {
   title: string;
@@ -46,7 +47,7 @@ const Conseil: React.FC<ConseilProps> = ({ title, image, description, isDark }) 
 };
 
 const ConseilsCommunaute = () => {
-  const [isDarkMode, setIsDarkMode] = useState(true);
+  const { isDarkMode } = useTheme();
 
   const conseils = [
     {
@@ -101,16 +102,7 @@ const ConseilsCommunaute = () => {
             <span className="text-xl font-bold tracking-tight">SmartESP</span>
           </div>
           
-          {/* Dark/Light mode toggle */}
-          <div className="flex items-center gap-3">
-            <Sun className={`h-4 w-4 ${isDarkMode ? 'text-gray-500' : 'text-yellow-500'}`} />
-            <Switch
-              checked={isDarkMode}
-              onCheckedChange={setIsDarkMode}
-              className="data-[state=checked]:bg-primary"
-            />
-            <Moon className={`h-4 w-4 ${isDarkMode ? 'text-blue-400' : 'text-gray-500'}`} />
-          </div>
+          <ThemeToggle variant="switch" />
         </div>
       </header>
 
