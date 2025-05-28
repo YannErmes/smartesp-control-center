@@ -20,9 +20,7 @@ const Index = () => {
         : 'bg-gray-50 text-gray-900'
     }`}>
       <Header />
-      <div id="hero">
-        <HeroSection />
-      </div>
+      <HeroSection />
       <PresentationSection />
       <StpSection />
       <AvantagesSection />
