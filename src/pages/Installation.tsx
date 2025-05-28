@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { ArrowLeft, Check, Circle } from "lucide-react";
+import { ArrowLeft, Check, Package } from "lucide-react";
 
 const Installation = () => {
   const [currentStep, setCurrentStep] = useState(1);
@@ -67,6 +67,36 @@ const Installation = () => {
           <p className="text-gray-400 text-lg">
             Guide étape par étape pour installer et configurer SmartESP
           </p>
+        </div>
+
+        {/* Packages à Installer Section */}
+        <div className="max-w-4xl mx-auto mb-16">
+          <div className="neomorphic rounded-xl p-8 bg-[#151515] mb-8">
+            <div className="flex items-center gap-3 mb-6">
+              <Package className="h-8 w-8 text-primary" />
+              <h2 className="text-2xl font-bold text-gradient-primary">Packages à Installer</h2>
+            </div>
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="bg-[#0a0a0a] rounded-lg p-4 border border-[#333]">
+                <h3 className="text-lg font-semibold mb-3 text-white">Python Dependencies</h3>
+                <div className="bg-black rounded p-3 font-mono text-sm text-green-400">
+                  <div>pip install smartesp</div>
+                  <div>pip install pyserial</div>
+                  <div>pip install opencv-python</div>
+                  <div>pip install numpy</div>
+                </div>
+              </div>
+              <div className="bg-[#0a0a0a] rounded-lg p-4 border border-[#333]">
+                <h3 className="text-lg font-semibold mb-3 text-white">System Requirements</h3>
+                <ul className="text-gray-400 space-y-2">
+                  <li>• Python 3.8 ou supérieur</li>
+                  <li>• Port USB disponible</li>
+                  <li>• 100MB d'espace libre</li>
+                  <li>• Permissions administrateur</li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
 
         <div className="max-w-4xl mx-auto">

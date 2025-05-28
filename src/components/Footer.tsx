@@ -17,7 +17,7 @@ const Footer = () => {
               <span className="text-xl font-bold tracking-tight">SmartESP</span>
             </div>
             <p className="text-gray-400 text-sm mb-4">
-              La solution complète pour contrôler vos modules OSP simplement et efficacement.
+              La solution complète pour contrôler vos modules ESP simplement et efficacement.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="hover:text-primary transition-colors">
@@ -41,7 +41,7 @@ const Footer = () => {
           <div>
             <h3 className="text-white font-semibold mb-4 text-lg">Liens rapides</h3>
             <ul className="space-y-2 text-gray-400">
-              {['presentation', 'stp', 'avantages', 'galerie'].map((item) => (
+              {['presentation', 'stp', 'avantages', 'galerie', 'conseils'].map((item) => (
                 <li key={item}>
                   <Link
                     to={item}
