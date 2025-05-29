@@ -122,6 +122,24 @@
   .animate-float {
     animation: float 6s ease-in-out infinite;
   }
+
+  /* Better contrast for light mode text - using direct color values to avoid circular dependency */
+  .light-mode .text-gray-600 {
+    color: #374151; /* equivalent to text-gray-700 */
+  }
+  
+  .light-mode .text-gray-500 {
+    color: #4b5563; /* equivalent to text-gray-600 */
+  }
+  
+  .light-mode .text-gray-400 {
+    color: #6b7280; /* equivalent to text-gray-500 */
+  }
+
+  /* Enhanced button contrast in light mode */
+  .light-mode button {
+    font-weight: 500;
+  }
 }
 
 @keyframes float {
