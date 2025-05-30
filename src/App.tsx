@@ -9,6 +9,10 @@ import Index from "./pages/Index";
 import VideoDemo from "./pages/VideoDemo";
 import Installation from "./pages/Installation";
 import ConseilsCommunaute from "./pages/ConseilsCommunaute";
+import ModuleESP32CAM from "./pages/ModuleESP32CAM";
+import ModuleESP32Simple from "./pages/ModuleESP32Simple";
+import ModuleESP32CAMMB from "./pages/ModuleESP32CAMMB";
+import ModuleESP8266 from "./pages/ModuleESP8266";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -25,6 +29,10 @@ const App = () => (
             <Route path="/demo" element={<VideoDemo />} />
             <Route path="/installation" element={<Installation />} />
             <Route path="/conseils" element={<ConseilsCommunaute />} />
+            <Route path="/modules/esp32cam" element={<ModuleESP32CAM />} />
+            <Route path="/modules/esp32simple" element={<ModuleESP32Simple />} />
+            <Route path="/modules/esp32cam-mb" element={<ModuleESP32CAMMB />} />
+            <Route path="/modules/esp8266" element={<ModuleESP8266 />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
