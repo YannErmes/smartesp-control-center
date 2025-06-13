@@ -103,19 +103,15 @@ const StpSection: React.FC = () => {
               <div className="text-xs text-gray-500 mono">Terminal</div>
             </div>
             <div className="bg-[#0a0a0a] p-4 rounded-lg font-mono text-sm">
-              <p className="text-green-400">$ pip install smartesp</p>
-              <p className="text-gray-400">Installing SmartESP...</p>
-              <p className="text-gray-400">Successfully installed smartesp-1.0.0</p>
-              <p className="text-green-400">$ smartesp --scan</p>
-              <p className="text-gray-400">Scanning for OSP devices...</p>
-              <p className="text-blue-400">Found OSP32CAM at 192.168.1.105</p>
-              <p className="text-blue-400">Found OSP32Simple at /dev/ttyUSB0</p>
-              <p className="text-green-400">$ smartesp --connect all</p>
-              <p className="text-gray-400">Connecting to all devices...</p>
-              <p className="text-blue-400">OSP32CAM: Connected</p>
-              <p className="text-blue-400">OSP32Simple: Connected</p>
-              <p className="text-green-400">$ smartesp --start</p>
-              <p className="text-purple-400">SmartESP interface running at http://localhost:8080</p>
+
+              ✅ WiFi connected
+
+              <p className="text-gray-400"> $ Moniteur serie</p>
+              <p className="text-gray-400"> Wifi scan ...........</p>
+              <p className="text-green-400">✅ WiFi connected </p>
+              <p className="text-gray-400"> IP Address: 192.168.43.8</p>
+              <p className="text-blue-400">félicition votre premier code  été téléverser  avec sucssé! 😎</p>
+              <p className="text-purple-400">SmartESP interface running </p>
               <p className="text-gray-300 flex items-center">
                 <span className="animate-pulse mr-1">■</span> _
               </p>
