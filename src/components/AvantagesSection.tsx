@@ -26,7 +26,7 @@ const AvantagesSection: React.FC = () => {
   const avantages = [
     {
       title: "Simplicité d'utilisation",
-      description: "Interface intuitive ne nécessitant aucune connaissance en programmation pour les opérations de base.",
+      description: "Interface intuitive ne nécessitant aucune connaissance  en programmation pour les opérations de base.",
       icon: (
         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
@@ -44,7 +44,7 @@ const AvantagesSection: React.FC = () => {
     },
     {
       title: "IA intégrée FavourV0.1",
-      description: "Contrôlez vos appareils via notre IA intégrée FavourV0.1 ou notre bibliothèque Python pour une intégration facile.",
+      description: "Contrôlez vos appareils via notre IA intégrée FavourV0.1 ",
       icon: (
         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
@@ -53,7 +53,7 @@ const AvantagesSection: React.FC = () => {
     },
     {
       title: "Sécurité intégrée",
-      description: "Communications cryptées et authentification robuste pour protéger vos appareils et données.",
+      description: "Communications websocket et http robuste pour protéger vos appareils .",
       icon: (
         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
@@ -62,7 +62,7 @@ const AvantagesSection: React.FC = () => {
     },
     {
       title: "Mode hors-ligne",
-      description: "Fonctionnalité complète même sans connexion internet, idéal pour les projets isolés.",
+      description: "Fonctionnalité complète même sans connexion internet, sauf pour notre assitant IA.",
       icon: (
         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
@@ -105,7 +105,7 @@ const AvantagesSection: React.FC = () => {
         
         <div className="mt-16 max-w-4xl mx-auto">
           <div className="neomorphic bg-[#151515] border-[#2a2a2a] p-6 rounded-xl">
-            <h3 className="text-xl font-bold mb-4 text-center">Performances inégalées</h3>
+            <h3 className="text-xl font-bold mb-4 text-center">Niveau performances </h3>
             
             <div className="grid grid-cols-3 gap-4">
               <div className="text-center">
@@ -113,11 +113,11 @@ const AvantagesSection: React.FC = () => {
                 <p className="text-sm text-gray-400">Taux de détection automatique</p>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-primary mb-1">5ms</div>
+                <div className="text-3xl font-bold text-primary mb-1">5ms+</div>
                 <p className="text-sm text-gray-400">Latence de contrôle</p>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-primary mb-1">100+</div>
+                <div className="text-3xl font-bold text-primary mb-1">4+</div>
                 <p className="text-sm text-gray-400">Modules compatibles</p>
               </div>
             </div>
