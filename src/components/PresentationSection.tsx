@@ -46,7 +46,7 @@ const PresentationSection: React.FC = () => {
               SmartESP est une interface centrale qui simplifie le contrôle et la programmation de tous vos modules ESP. Fini les configurations complexes et les interfaces disparates, gérez l'ensemble de vos appareils depuis un seul outil.
             </p>
             <p className="text-gray-400 mb-6">
-              Conçue par des développeurs pour des développeurs, notre solution offre aussi bien une interface graphique intuitive que des API robustes pour l'intégration à vos projets existants.
+              Conçue par des développeurs pour des développeurs, notre solution offre aussi bien une interface graphique intuitive que des systémes de communication robustes pour l'intégration à vos projets existants.
             </p>
             
             <h3 className="text-xl font-bold mb-3">Modules compatibles</h3>
