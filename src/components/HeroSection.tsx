@@ -91,48 +91,6 @@ const HeroSection: React.FC = () => {
                 </div>
               </div>
             </div>
-
-            {/* Code Preview */}
-            <div className="relative w-full max-w-md">
-              <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-accent/20 rounded-xl blur-2xl transform rotate-6"></div>
-              <div className="neomorphic rounded-xl p-6 bg-[#151515] relative z-10 transform hover:scale-[1.02] transition-transform duration-500">
-                <div className="flex items-center justify-between mb-4">
-                  <div className="flex space-x-2">
-                    <div className="w-3 h-3 rounded-full bg-red-500"></div>
-                    <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
-                    <div className="w-3 h-3 rounded-full bg-green-500"></div>
-                  </div>
-                  <div className="text-xs text-gray-500 mono">SmartESP v1.0</div>
-                </div>
-                <pre className="text-xs md:text-sm font-mono overflow-x-auto bg-[#0a0a0a] p-3 rounded-lg">
-                  <code className="text-gray-300">
-{`# Initialisation de SmartESP
-import smartesp
-
-# Configuration du module
-esp = smartesp.connect("ESP32CAM")
-
-# Récupération du flux vidéo
-camera = esp.get_camera()
-camera.start_stream()
-
-# Contrôle des capteurs
-if esp.has_sensor("temperature"):
-    temp = esp.get_sensor("temperature")
-    print(f"Température: {temp.read()}°C")
-
-# Actions à distance
-esp.send_command("LED_ON")
-
-# SmartESP gère tout pour vous!`}
-                  </code>
-                </pre>
-                <div className="mt-4 flex justify-between">
-                  <div className="text-xs text-green-400 mono">● Connecté à ESP32CAM</div>
-                  <div className="text-xs text-gray-400 mono">Autorefresh: ON</div>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </div>
