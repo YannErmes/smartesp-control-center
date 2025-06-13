@@ -153,13 +153,13 @@ const ConseilsCommunaute = () => {
                 Partagez vos expériences, posez vos questions et découvrez de nouvelles techniques avec des milliers de développeurs ESP.
               </p>
               <div className="flex justify-center space-x-4">
-                <a href="#" className="text-primary hover:text-primary/80 transition-colors">
-                  Discord
+                <a href="https://www.instagram.com/smart.esp/#" className="text-primary hover:text-primary/80 transition-colors">
+                  Instagram
                 </a>
-                <a href="#" className="text-primary hover:text-primary/80 transition-colors">
-                  Forum
+                <a href="https://chat.whatsapp.com/BYFnSgoU8BqEDmtuJMhp3k" className="text-primary hover:text-primary/80 transition-colors">
+                  Forum whatsapp
                 </a>
-                <a href="#" className="text-primary hover:text-primary/80 transition-colors">
+                <a href="https://github.com/YannErmes" className="text-primary hover:text-primary/80 transition-colors">
                   GitHub
                 </a>
               </div>
