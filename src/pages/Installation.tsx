@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { ArrowLeft, Check, Package, Cpu } from "lucide-react";
+import { ArrowLeft, Check, Package, Cpu, Download, BookOpen } from "lucide-react";
 
 const Installation = () => {
   const [currentStep, setCurrentStep] = useState(1);
@@ -76,6 +76,51 @@ const Installation = () => {
       title: "Microcontrôleur",
       image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=300&fit=crop",
       link: "#" // À remplacer par le lien fourni
+    }
+  ];
+
+  const pdfGuides = [
+    {
+      id: 1,
+      title: "Guide ESP32 CAM",
+      description: "Guide complet pour débuter avec l'ESP32 CAM",
+      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&h=300&fit=crop",
+      downloadUrl: "#" // À remplacer par le lien de téléchargement
+    },
+    {
+      id: 2,
+      title: "Programmation ESP32",
+      description: "Apprenez à programmer votre ESP32 facilement",
+      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=300&fit=crop",
+      downloadUrl: "#" // À remplacer par le lien de téléchargement
+    },
+    {
+      id: 3,
+      title: "Capteurs et ESP8266",
+      description: "Intégration de capteurs avec l'ESP8266",
+      image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400&h=300&fit=crop",
+      downloadUrl: "#" // À remplacer par le lien de téléchargement
+    },
+    {
+      id: 4,
+      title: "Projets IoT Avancés",
+      description: "Créez vos premiers projets IoT avec SmartESP",
+      image: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=400&h=300&fit=crop",
+      downloadUrl: "#" // À remplacer par le lien de téléchargement
+    },
+    {
+      id: 5,
+      title: "Debugging ESP32",
+      description: "Techniques de débogage pour vos projets ESP32",
+      image: "https://images.unsplash.com/photo-1473091534298-04dcbce3278c?w=400&h=300&fit=crop",
+      downloadUrl: "#" // À remplacer par le lien de téléchargement
+    },
+    {
+      id: 6,
+      title: "Sécurité IoT",
+      description: "Sécurisez vos dispositifs IoT efficacement",
+      image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=400&h=300&fit=crop",
+      downloadUrl: "#" // À remplacer par le lien de téléchargement
     }
   ];
 
@@ -231,6 +276,52 @@ const Installation = () => {
                   {component.title}
                 </h3>
               </a>
+            ))}
+          </div>
+        </div>
+
+        {/* Guides PDF Gratuits Section */}
+        <div className="max-w-6xl mx-auto mt-20">
+          <div className="text-center mb-12">
+            <div className="flex items-center justify-center gap-3 mb-6">
+              <BookOpen className="h-8 w-8 text-primary" />
+              <h2 className="text-3xl font-bold text-gradient-primary">Guides PDF Gratuits</h2>
+            </div>
+            <p className="text-gray-400 text-lg">
+              Téléchargez nos guides complets pour maîtriser SmartESP et vos projets IoT
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {pdfGuides.map((guide) => (
+              <div
+                key={guide.id}
+                className="neomorphic rounded-xl p-6 bg-[#151515] hover:neo-glow transition-all duration-300 group"
+              >
+                <div className="aspect-video rounded-lg overflow-hidden mb-4 border border-[#333]">
+                  <img
+                    src={guide.image}
+                    alt={guide.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <div className="text-center">
+                  <h3 className="text-xl font-semibold text-gradient-primary mb-2">
+                    {guide.title}
+                  </h3>
+                  <p className="text-gray-400 text-sm mb-4">
+                    {guide.description}
+                  </p>
+                  <a
+                    href={guide.downloadUrl}
+                    download
+                    className="inline-flex items-center gap-2 neomorphic bg-primary hover:bg-primary/90 text-white px-4 py-2 rounded-lg transition-all duration-300 hover:neo-glow"
+                  >
+                    <Download className="h-4 w-4" />
+                    Télécharger PDF
+                  </a>
+                </div>
+              </div>
             ))}
           </div>
         </div>
