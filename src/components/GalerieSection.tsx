@@ -1,12 +1,12 @@
 
 import { useState } from 'react';
 import { Dialog, DialogContent } from "@/components/ui/dialog";
-
-const images = [
+    
+const images = [  
   {
     url: "https://images.unsplash.com/photo-1518770660439-4636190af475",
     title: "Circuit OSP32CAM",
-    description: "Vue macro d'une carte OSP32CAM avec module caméra intégré"
+    description: "Vue macro d'une carte ESP32CAM avec module caméra intégré"
   },
   {
     url: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6",
@@ -77,8 +77,8 @@ const GalerieSection = () => {
         <div className="mt-16 flex justify-center">
           <div className="glass-morphism px-8 py-5 rounded-full text-center">
             <p className="text-gray-300">
-              Découvrez plus d'exemples et de projets utilisant SmartESP sur notre 
-              <a href="#" className="text-primary hover:text-accent transition-colors mx-1">communauté GitHub</a>
+            Découvrez plus d'exemples, de projets et des personnes expérimentées pour vous aider gratuitement sur notre 
+              <a href="https://chat.whatsapp.com/BYFnSgoU8BqEDmtuJMhp3k" className="text-primary hover:text-accent transition-colors mx-1">communauté Whatsapp</a>
             </p>
           </div>
         </div>
