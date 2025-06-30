@@ -1,7 +1,8 @@
 
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
-import { Star } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Star, MessageSquare } from 'lucide-react';
 import { useTheme } from '@/contexts/ThemeContext';
 
 const TestimonySection = () => {
@@ -89,7 +90,7 @@ const TestimonySection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           {testimonials.map((testimonial, index) => (
             <Card
               key={testimonial.id}
@@ -126,6 +127,16 @@ const TestimonySection = () => {
               </CardContent>
             </Card>
           ))}
+        </div>
+
+        <div className="text-center">
+          <Button 
+            className="neomorphic bg-primary hover:bg-primary/90 neo-glow text-white px-8 py-3"
+            onClick={() => window.open('https://smart-esp-reviews.netlify.app/', '_blank')}
+          >
+            <MessageSquare className="h-5 w-5 mr-2" />
+            Donner mon avis
+          </Button>
         </div>
       </div>
     </section>
