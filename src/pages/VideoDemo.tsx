@@ -8,10 +8,50 @@ import { useTheme } from '@/contexts/ThemeContext';
 const VideoDemo = () => {
   const { isDarkMode } = useTheme();
 
-  // Partie 1 : Vidéos explicatives avec boutons d'interaction
-  const explicativeVideos = [
+  // Partie 1 : Vidéos de démonstration simples
+  const demonstrationVideos = [
     {
       id: 1,
+      title: "SmartESP affichage de valeur en temps réel de resistance du  joystick",
+      url: "https://fe-store.pro/smartESPgalerievidoe/1.mp4",
+      description: "Démonstration complète d'une maison connectée avec SmartESP"
+    },
+    {
+      id: 2,
+      title: "Test en temps réel - Surveillance caméra",
+      url: "https://fe-store.pro/smartESPgalerievidoe/2.mp4",
+      description: "Test en direct d'un système de surveillance avec ESP32CAM"
+    },
+    {
+      id: 3,
+      title: "Démo capteurs environnementaux",
+      url: "https://fe-store.pro/smartESPgalerievidoe/3.mp4",
+      description: "Surveillance environnementale avec capteurs multiples"
+    },
+    {
+      id: 4,
+      title: "Contrôle LED et automatisation",
+      url: "https://fe-store.pro/smartESPgalerievidoe/4.mp4",
+      description: "Automatisation d'éclairage intelligent avec ESP"
+    },
+    {
+      id: 5,
+      title: "Système d'alarme connecté",
+      url: "https://fe-store.pro/smartESPgalerievidoe/5.mp4",
+      description: "Démonstration d'un système d'alarme complet"
+    },
+    {
+      id: 6,
+      title: "Interface web temps réel",
+      url: "https://fe-store.pro/smartESPgalerievidoe/6.mp4",
+      description: "Interface web pour contrôler tous vos modules ESP"
+    }
+  ];
+
+  // Partie 2 : Vidéos explicatives avec boutons d'interaction
+  const explicativeVideos = [
+    {
+      id: 7,
       title: "Configuration ESP32CAM",
       url: "https://fe-store.pro/smartESPgalerievidoe/video1.mp4",
       description: "Apprenez à configurer votre module ESP32CAM avec SmartESP",
@@ -19,7 +59,7 @@ const VideoDemo = () => {
       externalLink: "https://www.youtube.com/watch?v=example1"
     },
     {
-      id: 2,
+      id: 8,
       title: "Programmation ESP8266",
       url: "https://fe-store.pro/smartESPgalerievidoe/video2.mp4",
       description: "Guide complet pour programmer un ESP8266 avec SmartESP",
@@ -27,7 +67,7 @@ const VideoDemo = () => {
       externalLink: "https://www.youtube.com/watch?v=example2"
     },
     {
-      id: 3,
+      id: 9,
       title: "Intégration de capteurs",
       url: "https://fe-store.pro/smartESPgalerievidoe/video3.mp4",
       description: "Comment intégrer différents capteurs avec vos modules ESP",
@@ -35,7 +75,7 @@ const VideoDemo = () => {
       externalLink: "https://www.youtube.com/watch?v=example3"
     },
     {
-      id: 4,
+      id: 10,
       title: "Contrôle à distance",
       url: "https://fe-store.pro/smartESPgalerievidoe/video4.mp4",
       description: "Contrôlez vos modules ESP depuis n'importe où",
@@ -43,7 +83,7 @@ const VideoDemo = () => {
       externalLink: "https://www.youtube.com/watch?v=example4"
     },
     {
-      id: 5,
+      id: 11,
       title: "Projets IoT avancés",
       url: "https://fe-store.pro/smartESPgalerievidoe/video5.mp4",
       description: "Créez des projets IoT complexes avec SmartESP",
@@ -51,52 +91,12 @@ const VideoDemo = () => {
       externalLink: "https://www.youtube.com/watch?v=example5"
     },
     {
-      id: 6,
+      id: 12,
       title: "Débogage et optimisation",
       url: "https://fe-store.pro/smartESPgalerievidoe/video6.mp4",
       description: "Techniques de débogage et d'optimisation pour vos projets",
       githubLink: "https://github.com/fe-webstore/",
       externalLink: "https://www.youtube.com/watch?v=example6"
-    }
-  ];
-
-  // Partie 2 : Vidéos de démonstration simples
-  const demonstrationVideos = [
-    {
-      id: 7,
-      title: "SmartESP affichage de valeur en temps réel de resistance du  joystick",
-      url: "https://fe-store.pro/smartESPgalerievidoe/1.mp4",
-      description: "Démonstration complète d'une maison connectée avec SmartESP"
-    },
-    {
-      id: 8,
-      title: "Test en temps réel - Surveillance caméra",
-      url: "https://fe-store.pro/smartESPgalerievidoe/2.mp4",
-      description: "Test en direct d'un système de surveillance avec ESP32CAM"
-    },
-    {
-      id: 9,
-      title: "Démo capteurs environnementaux",
-      url: "https://fe-store.pro/smartESPgalerievidoe/3.mp4",
-      description: "Surveillance environnementale avec capteurs multiples"
-    },
-    {
-      id: 10,
-      title: "Contrôle LED et automatisation",
-      url: "https://fe-store.pro/smartESPgalerievidoe/4.mp4",
-      description: "Automatisation d'éclairage intelligent avec ESP"
-    },
-    {
-      id: 11,
-      title: "Système d'alarme connecté",
-      url: "https://fe-store.pro/smartESPgalerievidoe/5.mp4",
-      description: "Démonstration d'un système d'alarme complet"
-    },
-    {
-      id: 12,
-      title: "Interface web temps réel",
-      url: "https://fe-store.pro/smartESPgalerievidoe/6.mp4",
-      description: "Interface web pour contrôler tous vos modules ESP"
     }
   ];
 
@@ -141,7 +141,56 @@ const VideoDemo = () => {
           </p>
         </div>
 
-        {/* Partie 1 : Vidéos explicatives */}
+        {/* Partie 1 : Vidéos de démonstration */}
+        <section className="mb-20">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold mb-4 text-gradient-primary">
+              Vidéos de démonstration
+            </h2>
+            <p className={`text-lg ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>
+              SmartESP en action dans des projets réels
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+            {demonstrationVideos.map((video) => (
+              <div key={video.id} className={`neomorphic rounded-xl p-6 ${isDarkMode ? 'bg-[#151515]' : 'bg-white'}`}>
+                <h3 className="text-xl font-semibold mb-4 text-gradient-primary">
+                  {video.title}
+                </h3>
+                <div className={`aspect-video rounded-lg mb-4 border overflow-hidden relative cursor-pointer ${
+                  isDarkMode ? 'bg-[#0a0a0a] border-[#333]' : 'bg-gray-100 border-gray-300'
+                }`}>
+                  {video.url ? (
+                    <video 
+                      controls 
+                      className="w-full h-full object-cover"
+                      poster="/placeholder.svg"
+                      preload="metadata"
+                    >
+                      <source src={video.url} type="video/mp4" />
+                      Your browser does not support the video tag.
+                    </video>
+                  ) : (
+                    <div className="w-full h-full flex items-center justify-center">
+                      <div className="text-center">
+                        <Play className={`h-12 w-12 mx-auto mb-2 ${isDarkMode ? 'text-gray-500' : 'text-gray-400'}`} />
+                        <p className={`text-sm ${isDarkMode ? 'text-gray-500' : 'text-gray-400'}`}>
+                          Vidéo bientôt disponible
+                        </p>
+                      </div>
+                    </div>
+                  )}
+                </div>
+                <p className={`text-sm ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>
+                  {video.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Partie 2 : Vidéos explicatives */}
         <section className="mb-20">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4 text-gradient-primary">
@@ -205,55 +254,6 @@ const VideoDemo = () => {
                     Voir les instructions
                   </Button>
                 </div>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* Partie 2 : Vidéos de démonstration */}
-        <section className="mb-12">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4 text-gradient-primary">
-              Vidéos de démonstration
-            </h2>
-            <p className={`text-lg ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>
-              SmartESP en action dans des projets réels
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-            {demonstrationVideos.map((video) => (
-              <div key={video.id} className={`neomorphic rounded-xl p-6 ${isDarkMode ? 'bg-[#151515]' : 'bg-white'}`}>
-                <h3 className="text-xl font-semibold mb-4 text-gradient-primary">
-                  {video.title}
-                </h3>
-                <div className={`aspect-video rounded-lg mb-4 border overflow-hidden relative cursor-pointer ${
-                  isDarkMode ? 'bg-[#0a0a0a] border-[#333]' : 'bg-gray-100 border-gray-300'
-                }`}>
-                  {video.url ? (
-                    <video 
-                      controls 
-                      className="w-full h-full object-cover"
-                      poster="/placeholder.svg"
-                      preload="metadata"
-                    >
-                      <source src={video.url} type="video/mp4" />
-                      Your browser does not support the video tag.
-                    </video>
-                  ) : (
-                    <div className="w-full h-full flex items-center justify-center">
-                      <div className="text-center">
-                        <Play className={`h-12 w-12 mx-auto mb-2 ${isDarkMode ? 'text-gray-500' : 'text-gray-400'}`} />
-                        <p className={`text-sm ${isDarkMode ? 'text-gray-500' : 'text-gray-400'}`}>
-                          Vidéo bientôt disponible
-                        </p>
-                      </div>
-                    </div>
-                  )}
-                </div>
-                <p className={`text-sm ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>
-                  {video.description}
-                </p>
               </div>
             ))}
           </div>
