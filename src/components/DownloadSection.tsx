@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
-import { Download, Users } from 'lucide-react';
+import { Download, Users, MessageSquare } from 'lucide-react';
 import { Link as RouterLink } from 'react-router-dom';
 
 const DownloadSection: React.FC = () => {
@@ -35,18 +35,10 @@ const DownloadSection: React.FC = () => {
                   className="flex items-center justify-center w-full h-full px-4 py-2 text-white"
                 >
                   <Download className="h-4 w-4 mr-2" />
-                  Télécharger Smart ESP V0.1
+                  Télécharger Smart ESP V0.2
                 </a>
               </Button>
             </div>
-
-              <Button 
-            className="neomorphic bg-primary hover:bg-primary/90 neo-glow text-white px-8 py-3"
-            onClick={() => window.open('https://smart-esp-reviews.netlify.app/', '_blank')}
-          >
-            <MessageSquare className="h-5 w-5 mr-2" />
-            Donner mon avis
-          </Button>
 
             {/* ESP Driver */}
             <div className="neomorphic bg-[#151515] border-[#2a2a2a] rounded-xl p-8">
@@ -70,13 +62,24 @@ const DownloadSection: React.FC = () => {
           </div>
 
           {/* Community Button */}
-          <div className="mb-8">
+          <div className="mb-4">
             <RouterLink to="/conseils">
               <Button variant="outline" className="neomorphic hover:neo-glow text-gray-200 px-8 py-3">
                 <Users className="h-4 w-4 mr-2" />
                 Découvrir les Conseils de la Communauté
               </Button>
             </RouterLink>
+          </div>
+
+          {/* Donner mon avis Button */}
+          <div className="mb-8">
+            <Button
+              className="neomorphic bg-primary hover:bg-primary/90 neo-glow text-white px-8 py-3"
+              onClick={() => window.open('https://smart-esp-reviews.netlify.app/', '_blank')}
+            >
+              <MessageSquare className="h-5 w-5 mr-2" />
+              Donner mon avis
+            </Button>
           </div>
 
           {/* Footer info */}
