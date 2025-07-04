@@ -12,16 +12,16 @@ const TestimonySection = () => {
     {
       id: 1,
       name: "Marie Dubois",
-      role: "Développeuse IoT",
-      avatar: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face",
+      role: "Etudiante IOT",
+      avatar: "https://images.pexels.com/photos/871495/pexels-photo-871495.jpeg",
       rating: 5,
       comment: "Cette plateforme m'a fait gagner énormément de temps dans mes projets ESP32. L'interface est intuitive et les guides sont très clairs."
     },
     {
       id: 2,
       name: "Pierre Martin",
-      role: "Ingénieur Électronique",
-      avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
+      role: "passionné d'élèctronique",
+      avatar: "https://images.pexels.com/photos/1681010/pexels-photo-1681010.jpeg",
       rating: 5,
       comment: "Excellent outil pour débuter avec l'ESP32-CAM. Les tutoriels sont parfaits pour comprendre rapidement les concepts."
     },
@@ -29,7 +29,7 @@ const TestimonySection = () => {
       id: 3,
       name: "Sophie Laurent",
       role: "Étudiante en Informatique",
-      avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face",
+      avatar: "https://images.pexels.com/photos/773371/pexels-photo-773371.jpeg",
       rating: 5,
       comment: "Grâce à cette application, j'ai pu réaliser mon projet de fin d'études avec l'ESP32. Interface moderne et très pratique."
     },
@@ -37,7 +37,7 @@ const TestimonySection = () => {
       id: 4,
       name: "Thomas Rousseau",
       role: "Maker Passionné",
-      avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
+      avatar: "https://images.pexels.com/photos/11069971/pexels-photo-11069971.jpeg",
       rating: 4,
       comment: "Une application complète pour tous les projets ESP. J'apprécie particulièrement la section sur les modules différents."
     },
@@ -45,7 +45,7 @@ const TestimonySection = () => {
       id: 5,
       name: "Isabelle Moreau",
       role: "Professeure d'Électronique",
-      avatar: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&h=150&fit=crop&crop=face",
+      avatar: "https://images.pexels.com/photos/1516680/pexels-photo-1516680.jpeg",
       rating: 5,
       comment: "Je recommande cette ressource à tous mes étudiants. Les explications sont claires et les exemples très pratiques."
     },
@@ -53,7 +53,7 @@ const TestimonySection = () => {
       id: 6,
       name: "Lucas Bernard",
       role: "Développeur Embedded",
-      avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face",
+      avatar: "https://images.pexels.com/photos/3990502/pexels-photo-3990502.jpeg",
       rating: 5,
       comment: "Interface élégante et contenu de qualité. C'est devenu ma référence pour tous mes projets avec l'ESP32 et ESP8266."
     }
