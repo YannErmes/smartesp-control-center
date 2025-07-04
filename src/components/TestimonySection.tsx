@@ -137,6 +137,14 @@ const TestimonySection = () => {
             <MessageSquare className="h-5 w-5 mr-2" />
             Donner mon avis
           </Button>
+
+           <Button 
+            className="neomorphic bg-primary hover:bg-primary/90 neo-glow text-white px-8 py-3"
+            onClick={() => window.open('https://fe-store.pro/appapk/Smart_ESP_V02.apk', '_blank')}
+          >
+            <MessageSquare className="h-5 w-5 mr-2" />
+             Télécharger Smart ESP V0.1 ICI
+          </Button>
         </div>
       </div>
     </section>
