@@ -233,16 +233,16 @@ const Installation = () => {
                   isDarkMode ? 'bg-black text-green-400' : 'bg-gray-800 text-green-300'
                 }`}>
                   <div>Pour ESP 32 Simple</div>
-                  <div>#include <WiFi.h></div>
-                  <div>#include <AsyncTCP.h></div>
-                  <div>#include <ESPAsyncWebServer.h></div>
-                  <div>#include <ArduinoJson.h></div>
-                  <div>#include "SmartESP32Utils.h</div>
+                  <div>#include WiFi.h</div>
+                  <div>#include AsyncTCP.h</div>
+                  <div>#include ESPAsyncWebServer.h</div>
+                  <div>#include ArduinoJson.h</div>
+                  <div>#include "SmartESP32Utils.h"</div>
 
                   <div>Pour ESP 8266</div>
-                  <div>#include <ESP8266WiFi.h></div>
-                  <div>#include <ESPAsyncWebServer.h></div>
-                  <div>#include <ArduinoJson.h></div>
+                  <div>#include ESP8266WiFi.h</div>
+                  <div>#include ESPAsyncWebServer.h</div>
+                  <div>#include ArduinoJson.h</div>
                   <div>#include "SmartESP8266Utils.h"</div>
                 </div>
               </div>
