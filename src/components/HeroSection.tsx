@@ -55,19 +55,7 @@ const HeroSection: React.FC = () => {
               </RouterLink>
             </div>
             
-            {/* Nouveaux boutons */}
-            <div className="flex flex-wrap gap-4">
-              <RouterLink to="/installation">
-                <Button variant="outline" className="neomorphic hover:neo-glow text-gray-200 px-6 py-3">
-                  Documentation
-                </Button>
-              </RouterLink>
-              <Button className="neomorphic bg-accent hover:bg-accent/90 accent-glow text-white px-6 py-3">
-                <Download className="h-4 w-4 mr-2" />
-                Télécharger Smart ESP V.01
-              </Button>
-            </div>
-          </div>
+         
           
           <div className="lg:w-1/2 flex flex-col items-center gap-8 fade-in-delay-1">
             {/* App Screenshot */}
@@ -76,7 +64,7 @@ const HeroSection: React.FC = () => {
               <div className="neomorphic rounded-2xl p-4 bg-[#151515] relative z-10 transform hover:scale-[1.02] transition-transform duration-500">
                 <div className="aspect-[4/3] rounded-xl overflow-hidden border border-[#333] bg-gradient-to-br from-[#0a0a0a] to-[#1a1a1a]">
                   <img
-                    src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&h=600&fit=crop"
+                    src="https://fe-store.pro/smartESPgaleriephoto/Home.png"
                     alt="SmartESP Application Screenshot"
                     className="w-full h-full object-cover"
                   />
