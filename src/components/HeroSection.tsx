@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Link } from 'react-scroll';
@@ -30,6 +29,7 @@ const HeroSection: React.FC = () => {
       
       <div className="container mx-auto px-4 z-10">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
+          {/* Left column */}
           <div className="lg:w-1/2 mb-10 lg:mb-0 fade-in">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
               <span className="text-gradient-primary">SmartESP</span>
@@ -54,9 +54,9 @@ const HeroSection: React.FC = () => {
                 </Button>
               </RouterLink>
             </div>
-            
-         
+          </div> {/* <-- This closing div was missing */}
           
+          {/* Right column */}
           <div className="lg:w-1/2 flex flex-col items-center gap-8 fade-in-delay-1">
             {/* App Screenshot */}
             <div className="relative w-full max-w-lg">
