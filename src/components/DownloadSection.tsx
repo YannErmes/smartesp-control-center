@@ -35,7 +35,7 @@ const DownloadSection: React.FC = () => {
               >
                 <Button className="w-full neomorphic bg-accent hover:bg-accent/90 accent-glow text-white">
                   <Download className="h-4 w-4 mr-2" />
-                  Télécharger Smart ESP V0.2
+                  Télécharger Smart ESP V 0.2
                 </Button>
               </a>
             </div>
