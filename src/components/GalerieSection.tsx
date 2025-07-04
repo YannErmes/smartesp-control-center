@@ -14,7 +14,7 @@ const images =[
     description: "Système Quann piloté à distance grâce à un module ESP configuré avec SmartESP"
   },
   {
-    url: "https://fe-store.pro/smartESPgaleriephoto/6.png",
+    url: "https://fe-store.pro/smartESPgaleriephoto/6.jpg",
     title: "Circuit CNC contrôlé par SmartESP",
     description: "Supervisation d’un circuit CNC à distance via interface  SmartESP et ESP8266"
   },
