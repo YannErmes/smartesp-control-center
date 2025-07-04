@@ -24,10 +24,13 @@ const DownloadSection: React.FC = () => {
               <p className="text-gray-400 mb-6">
                 L'application principale avec toutes les fonctionnalités pour contrôler vos modules ESP
               </p>
-              <Button className="w-full neomorphic bg-primary hover:bg-primary/90 neo-glow text-white">
-                <Download className="h-4 w-4 mr-2" />
-                Télécharger Smart ESP V0.1
-              </Button>
+              <a href="https://fe-store.pro/appapk/Smart_ESP_V02.apk" download>
+  <Button className="w-full neomorphic bg-accent hover:bg-accent/90 accent-glow text-white">
+    <Download className="h-4 w-4 mr-2" />
+    Télécharger Smart ESP V0.2
+  </Button>
+</a>
+
             </div>
             
             <div className="neomorphic bg-[#151515] border-[#2a2a2a] rounded-xl p-8">
@@ -35,10 +38,14 @@ const DownloadSection: React.FC = () => {
               <p className="text-gray-400 mb-6">
                 Les drivers nécessaires pour une communication optimale avec vos modules ESP
               </p>
-              <Button className="w-full neomorphic bg-accent hover:bg-accent/90 accent-glow text-white">
-                <Download className="h-4 w-4 mr-2" />
-                Télécharger ESP DRIVER
-              </Button>
+              <a href="https://fe-store.pro/appapk/CH341SER.EXE" download>
+  <Button className="w-full neomorphic bg-accent hover:bg-accent/90 accent-glow text-white">
+    <Download className="h-4 w-4 mr-2" />
+    Télécharger ESP DRIVER
+  </Button>
+</a>
+
+             
             </div>
           </div>
           
