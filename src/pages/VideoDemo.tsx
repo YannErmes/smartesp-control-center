@@ -13,49 +13,49 @@ const VideoDemo = () => {
     {
       id: 1,
       title: "Configuration ESP32CAM",
-      url: "https://fe-store.pro/appapk/videos/ESP video demo.mp4",
+      url: "https://fe-store.pro/smartESPgalerievidoe/video1.mp4",
       description: "Apprenez à configurer votre module ESP32CAM avec SmartESP",
-      githubLink: "https://github.com/smartesp/esp32cam-config",
+      githubLink: "https://github.com/fe-webstore/",
       externalLink: "https://www.youtube.com/watch?v=example1"
     },
     {
       id: 2,
       title: "Programmation ESP8266",
-      url: "https://fe-store.pro/appapk/videos/ESP video demo2.mp4",
+      url: "https://fe-store.pro/smartESPgalerievidoe/video2.mp4",
       description: "Guide complet pour programmer un ESP8266 avec SmartESP",
-      githubLink: "https://github.com/smartesp/esp8266-programming",
+      githubLink: "https://github.com/fe-webstore/",
       externalLink: "https://www.youtube.com/watch?v=example2"
     },
     {
       id: 3,
       title: "Intégration de capteurs",
-      url: "",
+      url: "https://fe-store.pro/smartESPgalerievidoe/video3.mp4",
       description: "Comment intégrer différents capteurs avec vos modules ESP",
-      githubLink: "https://github.com/smartesp/sensors-integration",
+      githubLink: "https://github.com/fe-webstore/",
       externalLink: "https://www.youtube.com/watch?v=example3"
     },
     {
       id: 4,
       title: "Contrôle à distance",
-      url: "",
+      url: "https://fe-store.pro/smartESPgalerievidoe/video4.mp4",
       description: "Contrôlez vos modules ESP depuis n'importe où",
-      githubLink: "https://github.com/smartesp/remote-control",
+      githubLink: "https://github.com/fe-webstore/",
       externalLink: "https://www.youtube.com/watch?v=example4"
     },
     {
       id: 5,
       title: "Projets IoT avancés",
-      url: "",
+      url: "https://fe-store.pro/smartESPgalerievidoe/video5.mp4",
       description: "Créez des projets IoT complexes avec SmartESP",
-      githubLink: "https://github.com/smartesp/iot-projects",
+      githubLink: "https://github.com/fe-webstore/",
       externalLink: "https://www.youtube.com/watch?v=example5"
     },
     {
       id: 6,
       title: "Débogage et optimisation",
-      url: "",
+      url: "https://fe-store.pro/smartESPgalerievidoe/video6.mp4",
       description: "Techniques de débogage et d'optimisation pour vos projets",
-      githubLink: "https://github.com/smartesp/debugging-tips",
+      githubLink: "https://github.com/fe-webstore/",
       externalLink: "https://www.youtube.com/watch?v=example6"
     }
   ];
@@ -64,38 +64,38 @@ const VideoDemo = () => {
   const demonstrationVideos = [
     {
       id: 7,
-      title: "SmartESP en action - Projet maison connectée",
-      url: "https://fe-store.pro/appapk/videos/ESP video demo.mp4",
+      title: "SmartESP affichage de valeur en temps réel de resistance du  joystick",
+      url: "https://fe-store.pro/smartESPgalerievidoe/1.mp4",
       description: "Démonstration complète d'une maison connectée avec SmartESP"
     },
     {
       id: 8,
       title: "Test en temps réel - Surveillance caméra",
-      url: "https://fe-store.pro/appapk/videos/ESP video demo2.mp4",
+      url: "https://fe-store.pro/smartESPgalerievidoe/2.mp4",
       description: "Test en direct d'un système de surveillance avec ESP32CAM"
     },
     {
       id: 9,
       title: "Démo capteurs environnementaux",
-      url: "",
+      url: "https://fe-store.pro/smartESPgalerievidoe/3.mp4",
       description: "Surveillance environnementale avec capteurs multiples"
     },
     {
       id: 10,
       title: "Contrôle LED et automatisation",
-      url: "",
+      url: "https://fe-store.pro/smartESPgalerievidoe/4.mp4",
       description: "Automatisation d'éclairage intelligent avec ESP"
     },
     {
       id: 11,
       title: "Système d'alarme connecté",
-      url: "",
+      url: "https://fe-store.pro/smartESPgalerievidoe/5.mp4",
       description: "Démonstration d'un système d'alarme complet"
     },
     {
       id: 12,
       title: "Interface web temps réel",
-      url: "",
+      url: "https://fe-store.pro/smartESPgalerievidoe/6.mp4",
       description: "Interface web pour contrôler tous vos modules ESP"
     }
   ];
