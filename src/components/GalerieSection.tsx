@@ -9,12 +9,12 @@ const images =[
     description: "Gestion automatique de l’ouverture de la poubelle via ESP et SmartESP"
   },
   {
-    url: "https://fe-store.pro/smartESPgaleriephoto/8.jpg",
+    url: "https://fe-store.pro/smartESPgaleriephoto/8.png",
     title: "Quann intelligent contrôlé par ESP via SmartESP",
     description: "Système Quann piloté à distance grâce à un module ESP configuré avec SmartESP"
   },
   {
-    url: "https://fe-store.pro/smartESPgaleriephoto/6.jpg",
+    url: "https://fe-store.pro/smartESPgaleriephoto/6.png",
     title: "Circuit CNC contrôlé par SmartESP",
     description: "Supervisation d’un circuit CNC à distance via interface  SmartESP et ESP8266"
   },
@@ -24,7 +24,7 @@ const images =[
     description: "Déclenchement d’ouverture de porte et envoi de notifications via ESP et SmartESP plus modification de code"
   },
   {
-    url: "https://fe-store.pro/smartESPgaleriephoto/11.jpg",
+    url: "https://fe-store.pro/smartESPgaleriephoto/11.png",
     title: "Monitoring multi-ESP d'une voiture de surveillance",
     description: "Surveillance mobile avec ESP8266 pour le contrôle et ESP32-CAM pour la vidéo"
   }
