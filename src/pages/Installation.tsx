@@ -12,85 +12,81 @@ const Installation = () => {
     {
       id: 1,
       title: "Étape 1",
-      description: "Contenu à remplir ultérieurement"
+      description: "📥 Rends-toi sur la page de téléchargement de Smart ESP pour récupérer l’APK et les fichiers nécessairent (driver ESP) ."
     },
     {
       id: 2,
       title: "Étape 2", 
-      description: "Contenu à remplir ultérieurement"
+      description: "📱 Installe l'application Smart ESP sur ton appareil."
     },
     {
       id: 3,
       title: "Étape 3",
-      description: "Contenu à remplir ultérieurement"
+      description: "Rendez-vous sur le GitHub officiel Smart ESP pour :Télécharger le code source spécifique à ton projet "
     },
     {
       id: 4,
       title: "Étape 4",
-      description: "Contenu à remplir ultérieurement"
+      description: " Configurer les packages et librairies"
     },
     {
       id: 5,
       title: "Étape 5",
-      description: "Contenu à remplir ultérieurement"
+      description: "Félicitation 🎥 Une vidéo de démonstration est disponible pour t’aider pour la suite"
     },
-    {
-      id: 6,
-      title: "Étape 6",
-      description: "Contenu à remplir ultérieurement"
-    }
+    
   ];
 
   const electronicComponents = [
     {
       id: 1,
-      name: "ESP32 CAM",
-      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&h=300&fit=crop"
+      name: "Servo-Motor",
+      image: "https://iotdesignpro.com/sites/default/files/inline-images/Servo-Motor-Pinout.jpg"
     },
     {
       id: 2,
-      name: "ESP8266",
-      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=300&fit=crop"
+      name: "Relay 5V",
+      image: "https://components101.com/sites/default/files/component_pin/Single-Channel-Relay-Module-Pinout.jpg"
     },
     {
       id: 3,
-      name: "Résistance 220Ω",
-      image: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=400&h=300&fit=crop"
+      name: "Capteur d'humidité DHTXX de  l'air",
+      image: "https://cdn.circuitgeeks.com/wp-content/uploads/2021/11/DHT11-Pinout.png"
     },
     {
       id: 4,
-      name: "LED RGB",
-      image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=400&h=300&fit=crop"
+      name: "Capteur PIR",
+      image: "https://community-assets.home-assistant.io/original/4X/c/9/0/c90ca57982cf3747284c7d232ef741b4132d2d62.jpeg"
     },
     {
       id: 5,
-      name: "Capteur DHT22",
-      image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400&h=300&fit=crop"
+      name: "Capteur PIR",
+      image: "https://mytectutor.com/wp-content/uploads/2019/04/pir_sensor_pinout.png"
     },
     {
       id: 6,
-      name: "Breadboard",
-      image: "https://images.unsplash.com/photo-1473091534298-04dcbce3278c?w=400&h=300&fit=crop"
+      name: "Capteur IR",
+      image: "https://microcontrollerslab.com/wp-content/uploads/2020/01/IR-receiver-with-and-without-metallic-head.png"
     },
     {
       id: 7,
-      name: "Jumper Wires",
-      image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop"
+      name: "Capteur d'humidité du sol",
+      image: "https://sltech.com.np/wp-content/uploads/2024/08/soil-moisture-pin.jpg"
     },
     {
       id: 8,
-      name: "Condensateur 100µF",
-      image: "https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=400&h=300&fit=crop"
+      name: "Utrasonic",
+      image: "https://microcontrollerslab.com/wp-content/uploads/2014/12/HC-SR04-Ultrasonic-Sensor-Pinout-diagram.jpg"
     },
     {
       id: 9,
-      name: "Bouton Poussoir",
-      image: "https://images.unsplash.com/photo-1542744094-3a31f272c490?w=400&h=300&fit=crop"
+      name: "Suiveur de ligne",
+      image: "https://i0.wp.com/srituhobby.com/wp-content/uploads/2023/11/3-11.png?resize=1024%2C576&ssl=1"
     },
     {
       id: 10,
-      name: "Servo Moteur",
-      image: "https://images.unsplash.com/photo-1580894894513-541e068a3e2b?w=400&h=300&fit=crop"
+      name: "Transistor",
+      image: "https://components101.com/sites/default/files/component_pin/LM35-Pinout.pngg"
     }
   ];
 
@@ -345,7 +341,7 @@ const Installation = () => {
               <h2 className="text-3xl font-bold text-gradient-primary">Documentation - Composants Électroniques</h2>
             </div>
             <p className={`text-lg ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>
-              Découvrez les 10 composants électroniques essentiels pour vos projets SmartESP
+              Découvrez les quelques composants électroniques les  tension d'alimentation recommandé
             </p>
           </div>
 
