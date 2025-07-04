@@ -51,14 +51,14 @@ const ConseilsCommunaute = () => {
 
   const conseils = [
     {
-      title: "Optimisation des Connexions ESP",
-      image: "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?w=400&h=250&fit=crop",
-      description: "Découvrez les meilleures pratiques pour optimiser les connexions de vos modules ESP et améliorer la stabilité."
+      title: " Déconnecter TX/RX si utilisé avant l’upload de code ",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTB51sBK--IN-94F5OeypIVONgjUvjP7IRJ6w&s",
+      description: "Si tu utilises un module connecté en UART (TX/RX), débranche-le avant d’envoyer le code."
     },
     {
-      title: "Configuration Réseau Avancée",
-      image: "https://images.unsplash.com/photo-1582562124811-c09040d0a901?w=400&h=250&fit=crop",
-      description: "Apprenez à configurer des réseaux complexes avec plusieurs modules ESP pour des projets d'envergure."
+      title: "Vérifier les tensions d'alimentation (3.3V / 5V)",
+      image: "https://www.researchgate.net/publication/359068957/figure/fig2/AS:1131088432893953@1646683905265/The-pin-diagram-of-DHT11-temperature-sensors.png",
+      description: "⚠️ Tous les composants ne supportent pas le 5V !"
     },
     {
       title: "Débogage et Diagnostic",
@@ -66,14 +66,14 @@ const ConseilsCommunaute = () => {
       description: "Techniques avancées de débogage pour identifier et résoudre rapidement les problèmes de communication."
     },
     {
-      title: "Sécurité et Chiffrement",
-      image: "https://images.unsplash.com/photo-1500673922987-e212871fec22?w=400&h=250&fit=crop",
-      description: "Implémentez des mesures de sécurité robustes pour protéger vos appareils ESP contre les intrusions."
+      title: " Éviter de brancher des modules à chaud",
+      image: "https://circuitdigest.com/sites/default/files/inlineimages/u2/IoT-Based-Temperature-and-Humidity-Measurement-using-ESP32-and-DHT11-Sensor.jpg",
+      description: "Ne branche/débranche aucun composant à chaud (pendant que la carte est alimentée)."
     },
     {
-      title: "Performance et Monitoring",
-      image: "https://images.unsplash.com/photo-1501854140801-50d01698950b?w=400&h=250&fit=crop",
-      description: "Surveillez les performances de vos modules ESP en temps réel et optimisez leur fonctionnement."
+      title: "Tester les composants un par un",
+      image: "https://preview.redd.it/esp32-power-supply-with-sensors-v0-cxop1y0gr3jb1.jpg?width=1235&format=pjpg&auto=webp&s=2bf4e032111fdfa3f7b0d224da632bb6be8a7d32",
+      description: "Cela permet d’isoler les problèmes plus facilement en cas de dysfonctionnement."
     }
   ];
 
