@@ -86,7 +86,7 @@ const PresentationSection: React.FC = () => {
                 isDarkMode ? 'bg-[#151515]' : 'bg-white'
               }`}>
                 <img
-                  src="https://images.unsplash.com/photo-1518770660439-4636190af475"
+                  src="https://i.postimg.cc/CMCcLNKK/Digital-Marketing-Agency-Facebook-Post-1.png"
                   alt="Circuit électronique ESP"
                   className="rounded-lg object-cover w-full h-full"
                 />
