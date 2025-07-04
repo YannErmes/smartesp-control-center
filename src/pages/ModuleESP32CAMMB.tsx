@@ -2,11 +2,18 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, Code, Image as ImageIcon, BookOpen } from "lucide-react";
 import { useTheme } from '@/contexts/ThemeContext';
 
 const ModuleESP32CAMMB = () => {
   const { isDarkMode } = useTheme();
+
+  const moduleImages = [
+    "https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&h=300&fit=crop",
+    "https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=400&h=300&fit=crop",
+    "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=300&fit=crop",
+    "https://images.unsplash.com/photo-1473091534298-04dcbce3278c?w=400&h=300&fit=crop"
+  ];
 
   return (
     <div className={`min-h-screen transition-colors duration-300 ${
@@ -45,8 +52,78 @@ const ModuleESP32CAMMB = () => {
           </p>
         </div>
 
-        <div className="max-w-4xl mx-auto">
-          <div className={`neomorphic rounded-xl p-8 ${isDarkMode ? 'bg-[#151515]' : 'bg-white'} mb-8`}>
+        <div className="max-w-6xl mx-auto space-y-12">
+          {/* Images Section */}
+          <div className={`neomorphic rounded-xl p-8 ${isDarkMode ? 'bg-[#151515]' : 'bg-white'}`}>
+            <div className="flex items-center gap-3 mb-6">
+              <ImageIcon className="h-6 w-6 text-primary" />
+              <h2 className="text-2xl font-bold text-gradient-primary">Images du module</h2>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+              {moduleImages.map((image, index) => (
+                <div key={index} className="aspect-square rounded-lg overflow-hidden border border-gray-300">
+                  <img
+                    src={image}
+                    alt={`ESP32CAM MB Image ${index + 1}`}
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Code Section */}
+          <div className={`neomorphic rounded-xl p-8 ${isDarkMode ? 'bg-[#151515]' : 'bg-white'}`}>
+            <div className="flex items-center gap-3 mb-6">
+              <Code className="h-6 w-6 text-primary" />
+              <h2 className="text-2xl font-bold text-gradient-primary">Code du module</h2>
+            </div>
+            <div className="text-center">
+              <Button className="neomorphic bg-primary hover:bg-primary/90 neo-glow text-white px-8 py-3">
+                <Code className="h-5 w-5 mr-2" />
+                Voir le code du module
+              </Button>
+            </div>
+          </div>
+
+          {/* Instructions Section */}
+          <div className={`neomorphic rounded-xl p-8 ${isDarkMode ? 'bg-[#151515]' : 'bg-white'}`}>
+            <div className="flex items-center gap-3 mb-6">
+              <BookOpen className="h-6 w-6 text-primary" />
+              <h2 className="text-2xl font-bold text-gradient-primary">Instructions d'utilisation</h2>
+            </div>
+            <div className="prose max-w-none">
+              <div className={`${isDarkMode ? 'text-gray-300' : 'text-gray-700'} space-y-4`}>
+                <h3 className="text-lg font-semibold mb-3">Avantages du Motherboard</h3>
+                <ol className="list-decimal list-inside space-y-2">
+                  <li>Connectez directement via USB-C sans adaptateur FTDI</li>
+                  <li>Alimentez le module de façon stable avec 5V</li>
+                  <li>Utilisez le reset automatique pour la programmation</li>
+                  <li>Profitez du convertisseur CH340G intégré</li>
+                </ol>
+                
+                <h3 className="text-lg font-semibold mb-3 mt-6">Configuration rapide</h3>
+                <ul className="list-disc list-inside space-y-2">
+                  <li>Branchez le câble USB-C à votre ordinateur</li>
+                  <li>Ouvrez l'IDE Arduino et sélectionnez le port série</li>
+                  <li>Chargez votre code sans manipulation de boutons</li>
+                  <li>Le module redémarre automatiquement après upload</li>
+                </ul>
+
+                <div className={`p-4 rounded-lg mt-6 ${
+                  isDarkMode ? 'bg-purple-900/20 border border-purple-800' : 'bg-purple-50 border border-purple-200'
+                }`}>
+                  <p className="text-sm">
+                    <strong>Avantage :</strong> Le motherboard élimine les problèmes de programmation 
+                    et offre une expérience plug-and-play optimale.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Specifications */}
+          <div className={`neomorphic rounded-xl p-8 ${isDarkMode ? 'bg-[#151515]' : 'bg-white'}`}>
             <h2 className="text-2xl font-bold mb-6 text-gradient-primary">
               Caractéristiques principales
             </h2>

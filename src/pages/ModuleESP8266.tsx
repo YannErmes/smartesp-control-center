@@ -2,11 +2,18 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, Code, Image as ImageIcon, BookOpen } from "lucide-react";
 import { useTheme } from '@/contexts/ThemeContext';
 
 const ModuleESP8266 = () => {
   const { isDarkMode } = useTheme();
+
+  const moduleImages = [
+    "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400&h=300&fit=crop",
+    "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=300&fit=crop",
+    "https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&h=300&fit=crop",
+    "https://images.unsplash.com/photo-1473091534298-04dcbce3278c?w=400&h=300&fit=crop"
+  ];
 
   return (
     <div className={`min-h-screen transition-colors duration-300 ${
@@ -45,8 +52,78 @@ const ModuleESP8266 = () => {
           </p>
         </div>
 
-        <div className="max-w-4xl mx-auto">
-          <div className={`neomorphic rounded-xl p-8 ${isDarkMode ? 'bg-[#151515]' : 'bg-white'} mb-8`}>
+        <div className="max-w-6xl mx-auto space-y-12">
+          {/* Images Section */}
+          <div className={`neomorphic rounded-xl p-8 ${isDarkMode ? 'bg-[#151515]' : 'bg-white'}`}>
+            <div className="flex items-center gap-3 mb-6">
+              <ImageIcon className="h-6 w-6 text-primary" />
+              <h2 className="text-2xl font-bold text-gradient-primary">Images du module</h2>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+              {moduleImages.map((image, index) => (
+                <div key={index} className="aspect-square rounded-lg overflow-hidden border border-gray-300">
+                  <img
+                    src={image}
+                    alt={`ESP8266 Image ${index + 1}`}
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Code Section */}
+          <div className={`neomorphic rounded-xl p-8 ${isDarkMode ? 'bg-[#151515]' : 'bg-white'}`}>
+            <div className="flex items-center gap-3 mb-6">
+              <Code className="h-6 w-6 text-primary" />
+              <h2 className="text-2xl font-bold text-gradient-primary">Code du module</h2>
+            </div>
+            <div className="text-center">
+              <Button className="neomorphic bg-primary hover:bg-primary/90 neo-glow text-white px-8 py-3">
+                <Code className="h-5 w-5 mr-2" />
+                Voir le code du module
+              </Button>
+            </div>
+          </div>
+
+          {/* Instructions Section */}
+          <div className={`neomorphic rounded-xl p-8 ${isDarkMode ? 'bg-[#151515]' : 'bg-white'}`}>
+            <div className="flex items-center gap-3 mb-6">
+              <BookOpen className="h-6 w-6 text-primary" />
+              <h2 className="text-2xl font-bold text-gradient-primary">Instructions d'utilisation</h2>
+            </div>
+            <div className="prose max-w-none">
+              <div className={`${isDarkMode ? 'text-gray-300' : 'text-gray-700'} space-y-4`}>
+                <h3 className="text-lg font-semibold mb-3">Premier démarrage</h3>
+                <ol className="list-decimal list-inside space-y-2">
+                  <li>Connectez l'ESP8266 via un adaptateur USB-TTL</li>
+                  <li>Installez les pilotes CH340 ou CP2102 selon votre adaptateur</li>
+                  <li>Configurez l'IDE Arduino pour ESP8266</li>
+                  <li>Sélectionnez le bon modèle (NodeMCU, Wemos D1, etc.)</li>
+                </ol>
+                
+                <h3 className="text-lg font-semibold mb-3 mt-6">Configuration WiFi</h3>
+                <ul className="list-disc list-inside space-y-2">
+                  <li>Utilisez la bibliothèque WiFi.h pour la connexion</li>
+                  <li>Configurez votre SSID et mot de passe WiFi</li>
+                  <li>Testez la connexion avec des exemples simples</li>
+                  <li>Implémentez un serveur web basique</li>
+                </ul>
+
+                <div className={`p-4 rounded-lg mt-6 ${
+                  isDarkMode ? 'bg-orange-900/20 border border-orange-800' : 'bg-orange-50 border border-orange-200'
+                }`}>
+                  <p className="text-sm">
+                    <strong>Économie :</strong> L'ESP8266 consomme très peu d'énergie et 
+                    est parfait pour les projets IoT alimentés par batterie.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Specifications */}
+          <div className={`neomorphic rounded-xl p-8 ${isDarkMode ? 'bg-[#151515]' : 'bg-white'}`}>
             <h2 className="text-2xl font-bold mb-6 text-gradient-primary">
               Caractéristiques principales
             </h2>
