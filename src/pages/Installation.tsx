@@ -236,10 +236,18 @@ const Installation = () => {
                 <div className={`rounded p-3 font-mono text-sm ${
                   isDarkMode ? 'bg-black text-green-400' : 'bg-gray-800 text-green-300'
                 }`}>
-                  <div>pip install smartesp</div>
-                  <div>pip install pyserial</div>
-                  <div>pip install opencv-python</div>
-                  <div>pip install numpy</div>
+                  <div>Pour ESP 32 Simple</div>
+                  <div>#include <WiFi.h></div>
+                  <div>#include <AsyncTCP.h></div>
+                  <div>#include <ESPAsyncWebServer.h></div>
+                  <div>#include <ArduinoJson.h></div>
+                  <div>#include "SmartESP32Utils.h</div>
+
+                  <div>Pour ESP 8266</div>
+                  <div>#include <ESP8266WiFi.h></div>
+                  <div>#include <ESPAsyncWebServer.h></div>
+                  <div>#include <ArduinoJson.h></div>
+                  <div>#include "SmartESP8266Utils.h"</div>
                 </div>
               </div>
               <div className={`rounded-lg p-4 border ${
@@ -247,10 +255,11 @@ const Installation = () => {
               }`}>
                 <h3 className="text-lg font-semibold mb-3">System Requirements</h3>
                 <ul className={`space-y-2 ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>
-                  <li>• Python 3.8 ou supérieur</li>
-                  <li>• Port USB disponible</li>
-                  <li>• 100MB d'espace libre</li>
-                  <li>• Permissions administrateur</li>
+                  <li>Mots-clés à taper</li>
+                  <li>• AsyncTCP</li>
+                  <li>• ESPAsyncWebServer</li>
+                  <li>• ArduinoJson</li>
+        
                 </ul>
               </div>
             </div>
