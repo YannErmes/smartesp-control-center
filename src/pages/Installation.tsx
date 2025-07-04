@@ -1,8 +1,7 @@
-
 import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { ArrowLeft, Check, Package, Cpu, Download, BookOpen, ExternalLink } from "lucide-react";
+import { ArrowLeft, Check, Package, Cpu, Download, BookOpen, ExternalLink, Zap } from "lucide-react";
 import { useTheme } from '@/contexts/ThemeContext';
 
 const Installation = () => {
@@ -39,6 +38,59 @@ const Installation = () => {
       id: 6,
       title: "Étape 6",
       description: "Contenu à remplir ultérieurement"
+    }
+  ];
+
+  const electronicComponents = [
+    {
+      id: 1,
+      name: "ESP32 CAM",
+      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&h=300&fit=crop"
+    },
+    {
+      id: 2,
+      name: "ESP8266",
+      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=300&fit=crop"
+    },
+    {
+      id: 3,
+      name: "Résistance 220Ω",
+      image: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=400&h=300&fit=crop"
+    },
+    {
+      id: 4,
+      name: "LED RGB",
+      image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=400&h=300&fit=crop"
+    },
+    {
+      id: 5,
+      name: "Capteur DHT22",
+      image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400&h=300&fit=crop"
+    },
+    {
+      id: 6,
+      name: "Breadboard",
+      image: "https://images.unsplash.com/photo-1473091534298-04dcbce3278c?w=400&h=300&fit=crop"
+    },
+    {
+      id: 7,
+      name: "Jumper Wires",
+      image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop"
+    },
+    {
+      id: 8,
+      name: "Condensateur 100µF",
+      image: "https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=400&h=300&fit=crop"
+    },
+    {
+      id: 9,
+      name: "Bouton Poussoir",
+      image: "https://images.unsplash.com/photo-1542744094-3a31f272c490?w=400&h=300&fit=crop"
+    },
+    {
+      id: 10,
+      name: "Servo Moteur",
+      image: "https://images.unsplash.com/photo-1580894894513-541e068a3e2b?w=400&h=300&fit=crop"
     }
   ];
 
@@ -273,6 +325,43 @@ const Installation = () => {
             >
               Suivant
             </Button>
+          </div>
+        </div>
+
+        {/* Documentation - Composants Électroniques Section */}
+        <div className="max-w-6xl mx-auto mt-20">
+          <div className="text-center mb-12">
+            <div className="flex items-center justify-center gap-3 mb-6">
+              <Zap className="h-8 w-8 text-primary" />
+              <h2 className="text-3xl font-bold text-gradient-primary">Documentation - Composants Électroniques</h2>
+            </div>
+            <p className={`text-lg ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>
+              Découvrez les 10 composants électroniques essentiels pour vos projets SmartESP
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
+            {electronicComponents.map((component) => (
+              <div
+                key={component.id}
+                className={`neomorphic rounded-xl p-4 hover:neo-glow transition-all duration-300 group ${
+                  isDarkMode ? 'bg-[#151515]' : 'bg-white'
+                }`}
+              >
+                <div className={`aspect-square rounded-lg overflow-hidden mb-3 border ${
+                  isDarkMode ? 'border-[#333]' : 'border-gray-200'
+                }`}>
+                  <img
+                    src={component.image}
+                    alt={component.name}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <h3 className="text-sm font-semibold text-center text-gradient-primary group-hover:text-white transition-colors">
+                  {component.name}
+                </h3>
+              </div>
+            ))}
           </div>
         </div>
 
