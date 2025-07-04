@@ -2,36 +2,31 @@
 import { useState } from 'react';
 import { Dialog, DialogContent } from "@/components/ui/dialog";
     
-const images = [  
+const images =[
   {
-    url: "https://images.unsplash.com/photo-1518770660439-4636190af475",
-    title: "Circuit OSP32CAM",
-    description: "Vue macro d'une carte ESP32CAM avec module caméra intégré"
+    url: "https://fe-store.pro/smartESPgaleriephoto/4.jpg",
+    title: "Poubelle intelligente",
+    description: "Gestion automatique de l’ouverture de la poubelle via ESP et SmartESP"
   },
   {
-    url: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6",
-    title: "Interface SmartESP",
-    description: "Capture d'écran du logiciel SmartESP en fonctionnement"
+    url: "https://fe-store.pro/smartESPgaleriephoto/8.jpg",
+    title: "Quann intelligent contrôlé par ESP via SmartESP",
+    description: "Système Quann piloté à distance grâce à un module ESP configuré avec SmartESP"
   },
   {
-    url: "https://images.unsplash.com/photo-1531297484001-80022131f5a1",
-    title: "Configuration sans-fil",
-    description: "Configuration d'un module OSP via l'interface web"
+    url: "https://fe-store.pro/smartESPgaleriephoto/6.jpg",
+    title: "Circuit CNC contrôlé par SmartESP",
+    description: "Supervisation d’un circuit CNC à distance via interface  SmartESP et ESP8266"
   },
   {
-    url: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7",
-    title: "Programmation SmartESP",
-    description: "Code source pour intégration rapide via API Python"
+    url: "https://fe-store.pro/smartESPgaleriephoto/9.jpg",
+    title: "Système de contrôle d'accès avec notifications grâce à SmartESP",
+    description: "Déclenchement d’ouverture de porte et envoi de notifications via ESP et SmartESP plus modification de code"
   },
   {
-    url: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81",
-    title: "Monitoring multi-appareils",
-    description: "Interface de monitoring pour plusieurs modules OSP"
-  },
-  {
-    url: "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
-    title: "Développement avec SmartESP",
-    description: "Environnement de développement intégré SmartESP IDE"
+    url: "https://fe-store.pro/smartESPgaleriephoto/11.jpg",
+    title: "Monitoring multi-ESP d'une voiture de surveillance",
+    description: "Surveillance mobile avec ESP8266 pour le contrôle et ESP32-CAM pour la vidéo"
   }
 ];
 
