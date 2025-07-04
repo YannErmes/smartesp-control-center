@@ -40,6 +40,14 @@ const DownloadSection: React.FC = () => {
               </Button>
             </div>
 
+              <Button 
+            className="neomorphic bg-primary hover:bg-primary/90 neo-glow text-white px-8 py-3"
+            onClick={() => window.open('https://smart-esp-reviews.netlify.app/', '_blank')}
+          >
+            <MessageSquare className="h-5 w-5 mr-2" />
+            Donner mon avis
+          </Button>
+
             {/* ESP Driver */}
             <div className="neomorphic bg-[#151515] border-[#2a2a2a] rounded-xl p-8">
               <h3 className="text-xl font-bold mb-4 text-gradient-primary">ESP DRIVER</h3>
