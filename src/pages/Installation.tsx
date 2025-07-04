@@ -93,38 +93,38 @@ const Installation = () => {
   const components = [
     {
       id: 1,
-      title: "Résistance",
-      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&h=300&fit=crop",
+      title: "ESP 32 ou 8266",
+      image: "https://techeonics.com/wp-content/uploads/2022/07/esp32-vs-esp8266-devlopment-boards.webp",
       link: "#" // À remplacer par le lien fourni
     },
     {
       id: 2,
-      title: "Condensateur",
-      image: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=400&h=300&fit=crop",
+      title: "LED",
+      image: "https://blog.sparkfuneducation.com/hubfs/EDU/BLOG%20Images/November%202017/LED%20Diagram.jpg",
       link: "#" // À remplacer par le lien fourni
     },
     {
       id: 3,
-      title: "Transistor",
-      image: "https://images.unsplash.com/photo-1473091534298-04dcbce3278c?w=400&h=300&fit=crop",
+      title: "Bouton Poussoir",
+      image: "https://marocproduits.com/mp_content/uploads/2019/08/5-mini-bouton-poussoir.jpg",
       link: "#" // À remplacer par le lien fourni
     },
     {
       id: 4,
-      title: "Diode LED",
-      image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=400&h=300&fit=crop",
+      title: "Potentiométre",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRy0pu43wzyJ6siWTj05KJ9HXCjrx4JmyneWQ&s",
       link: "#" // À remplacer par le lien fourni
     },
     {
       id: 5,
-      title: "Capteur",
-      image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400&h=300&fit=crop",
+      title: "Resistance",
+      image: "https://cdn.sparkfun.com/assets/c/4/a/9/d/515c7a2bce395f653d000002.png",
       link: "#" // À remplacer par le lien fourni
     },
     {
       id: 6,
-      title: "Microcontrôleur",
-      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=300&fit=crop",
+      title: "cable jumper ",
+      image: "https://shop.sb-components.co.uk/cdn/shop/products/jumping-wire_1800x1800_7153f42e-cd92-4401-9354-93dfc46c06f0.jpg",
       link: "#" // À remplacer par le lien fourni
     }
   ];
@@ -378,7 +378,7 @@ const Installation = () => {
               <h2 className="text-3xl font-bold text-gradient-primary">Composants Électroniques</h2>
             </div>
             <p className={`text-lg ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>
-              Découvrez les composants électroniques compatibles avec SmartESP
+              Découvrez les composants électroniques de  démmarage
             </p>
           </div>
 
