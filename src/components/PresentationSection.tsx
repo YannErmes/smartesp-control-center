@@ -81,17 +81,17 @@ const PresentationSection: React.FC = () => {
               ))}
             </div>
             
-            {/* Boutons de navigation entre modules */}
+            {/* Boutons de navigation entre modules - Corrigés pour rediriger vers les bonnes routes */}
             <div className="mt-8 flex flex-col sm:flex-row gap-4">
-              <RouterLink to="/modules/esp32cam" className="flex-1">
+              <RouterLink to="/modules/esp32simple" className="flex-1">
                 <Button className="w-full neomorphic bg-primary hover:bg-primary/90 neo-glow text-white">
-                  ESP32CAM
+                  ESP32Simple
                   <ArrowRight className="h-4 w-4 ml-2" />
                 </Button>
               </RouterLink>
-              <RouterLink to="/modules/esp32simple" className="flex-1">
+              <RouterLink to="/modules/esp32cam-mb" className="flex-1">
                 <Button className="w-full neomorphic bg-accent hover:bg-accent/90 accent-glow text-white">
-                  ESP32Simple
+                  ESP32CAM MB
                   <ArrowRight className="h-4 w-4 ml-2" />
                 </Button>
               </RouterLink>
