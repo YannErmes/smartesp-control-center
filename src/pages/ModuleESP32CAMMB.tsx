@@ -97,7 +97,7 @@ const ModuleESP32CAMMB = () => {
               <div className={`${isDarkMode ? 'text-gray-300' : 'text-gray-700'} space-y-4`}>
                 <h3 className="text-lg font-semibold mb-3">Avantages du Motherboard</h3>
                 <ol className="list-decimal list-inside space-y-2">
-                  <li>Connectez directement via USB-C sans adaptateur FTDI</li>
+                  <li>Connectez directement via USB sans adaptateur FTDI</li>
                   <li>Alimentez le module de façon stable avec 5V</li>
                   <li>Utilisez le reset automatique pour la programmation</li>
                   <li>Profitez du convertisseur CH340G intégré</li>
@@ -105,7 +105,7 @@ const ModuleESP32CAMMB = () => {
                 
                 <h3 className="text-lg font-semibold mb-3 mt-6">Configuration rapide</h3>
                 <ul className="list-disc list-inside space-y-2">
-                  <li>Branchez le câble USB-C à votre ordinateur</li>
+                  <li>Branchez le câble USB à votre ordinateur</li>
                   <li>Ouvrez l'IDE Arduino et sélectionnez le port série</li>
                   <li>Chargez votre code sans manipulation de boutons</li>
                   <li>Le module redémarre automatiquement après upload</li>
@@ -137,7 +137,7 @@ const ModuleESP32CAMMB = () => {
                   <li>• Motherboard: CH340G intégrée</li>
                   <li>• Alimentation: 5V via USB</li>
                   <li>• Wi-Fi: 802.11 b/g/n</li>
-                  <li>• Connecteurs: USB-C</li>
+                  <li>• Connecteurs: USB</li>
                 </ul>
               </div>
               <div>
