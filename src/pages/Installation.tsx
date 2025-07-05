@@ -8,10 +8,10 @@ const Installation = () => {
   const { isDarkMode } = useTheme();
   const [currentStep, setCurrentStep] = useState(1);
 
-  const steps = [...];
-  const electronicComponents = [...];
-  const components = [...];
-  const pdfGuides = [...];
+  const steps = [];
+  const electronicComponents = [];
+  const components = [];
+  const pdfGuides = [];
 
   const openPdfViewer = (pdfUrl: string, title: string) => {
     const viewerUrl = `https://docs.google.com/viewer?url=${encodeURIComponent(pdfUrl)}&embedded=true`;
