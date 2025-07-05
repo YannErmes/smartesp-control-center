@@ -52,10 +52,10 @@ const PresentationSection: React.FC = () => {
           <div className="order-2 md:order-1">
             <h3 className="text-2xl font-bold mb-4">Une plateforme unifiée</h3>
             <p className={`mb-4 ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>
-              SmartESP est une interface centrale qui simplifie le contrôle et la programmation de tous vos modules ESP. Fini les configurations complexes et les interfaces disparates, gérez l'ensemble de vos appareils depuis un seul outil.
+              SmartESP est une interface centrale qui simplifie le contrôle et la programmation de tous vos modules ESP. Fini les configurations complexes et les interfaces disparates, gérez l'ensemble de vos devices en un seul endroit.
             </p>
             <p className={`mb-6 ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>
-              Conçue par des développeurs pour des développeurs, notre solution offre aussi bien une interface graphique intuitive que des systémes de communication robustes pour l'intégration à vos projets existants.
+              Conçue par des développeurs pour des développeurs, notre solution offre aussi bien une interface graphique intuitive que des systémes de communication robustes pour l'intégration avancée.
             </p>
             
             <h3 className="text-xl font-bold mb-3">Modules compatibles</h3>
