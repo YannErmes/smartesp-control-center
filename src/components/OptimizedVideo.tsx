@@ -1,6 +1,6 @@
 
 import React, { useState, useRef, useEffect } from 'react';
-import { Play, Pause } from 'lucide-react';
+import { Play, Pause, Maximize, Minimize } from 'lucide-react';
 import { useVideo } from '@/contexts/VideoContext';
 
 interface OptimizedVideoProps {
@@ -22,8 +22,32 @@ const OptimizedVideo: React.FC<OptimizedVideoProps> = ({
 }) => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [showControls, setShowControls] = useState(false);
+  const [isFullscreen, setIsFullscreen] = useState(false);
+  const [shouldAutoFullscreen, setShouldAutoFullscreen] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
   const { currentPlayingVideo, setCurrentPlayingVideo } = useVideo();
+
+  // Check if video frame is too small for comfortable viewing
+  useEffect(() => {
+    const checkVideoSize = () => {
+      if (containerRef.current) {
+        const container = containerRef.current;
+        const rect = container.getBoundingClientRect();
+        const viewportWidth = window.innerWidth;
+        const viewportHeight = window.innerHeight;
+        
+        // If video takes less than 70% of viewport width or is very small
+        const isSmall = (rect.width / viewportWidth) < 0.7 || rect.width < 500;
+        setShouldAutoFullscreen(isSmall);
+      }
+    };
+
+    checkVideoSize();
+    window.addEventListener('resize', checkVideoSize);
+    
+    return () => window.removeEventListener('resize', checkVideoSize);
+  }, []);
 
   useEffect(() => {
     if (currentPlayingVideo && currentPlayingVideo !== videoId && isPlaying) {
@@ -34,7 +58,31 @@ const OptimizedVideo: React.FC<OptimizedVideoProps> = ({
     }
   }, [currentPlayingVideo, videoId, isPlaying]);
 
-  const handlePlayPause = () => {
+  // Handle fullscreen changes
+  useEffect(() => {
+    const handleFullscreenChange = () => {
+      setIsFullscreen(!!document.fullscreenElement);
+    };
+
+    document.addEventListener('fullscreenchange', handleFullscreenChange);
+    return () => document.removeEventListener('fullscreenchange', handleFullscreenChange);
+  }, []);
+
+  const toggleFullscreen = async () => {
+    if (!containerRef.current) return;
+
+    try {
+      if (!document.fullscreenElement) {
+        await containerRef.current.requestFullscreen();
+      } else {
+        await document.exitFullscreen();
+      }
+    } catch (error) {
+      console.error('Error toggling fullscreen:', error);
+    }
+  };
+
+  const handlePlayPause = async () => {
     if (videoRef.current) {
       if (isPlaying) {
         videoRef.current.pause();
@@ -42,6 +90,16 @@ const OptimizedVideo: React.FC<OptimizedVideoProps> = ({
         setCurrentPlayingVideo(null);
       } else {
         setCurrentPlayingVideo(videoId);
+        
+        // Auto fullscreen if video frame is small
+        if (shouldAutoFullscreen && !document.fullscreenElement) {
+          try {
+            await toggleFullscreen();
+          } catch (error) {
+            console.error('Auto fullscreen failed:', error);
+          }
+        }
+        
         videoRef.current.play();
         setIsPlaying(true);
       }
@@ -52,6 +110,11 @@ const OptimizedVideo: React.FC<OptimizedVideoProps> = ({
     setIsPlaying(false);
     setShowControls(false);
     setCurrentPlayingVideo(null);
+    
+    // Exit fullscreen when video ends
+    if (document.fullscreenElement) {
+      document.exitFullscreen().catch(console.error);
+    }
   };
 
   useEffect(() => {
@@ -74,13 +137,14 @@ const OptimizedVideo: React.FC<OptimizedVideoProps> = ({
 
   return (
     <div 
-      className={`relative group ${className}`}
+      ref={containerRef}
+      className={`relative group ${className} ${isFullscreen ? 'bg-black' : ''}`}
       onMouseEnter={() => setShowControls(true)}
       onMouseLeave={() => setShowControls(false)}
     >
       <video
         ref={videoRef}
-        className="w-full h-full object-cover rounded-lg"
+        className={`w-full h-full object-cover rounded-lg ${isFullscreen ? 'rounded-none' : ''}`}
         poster={thumbnail}
         preload="metadata"
         playsInline
@@ -94,17 +158,32 @@ const OptimizedVideo: React.FC<OptimizedVideoProps> = ({
       <div className={`absolute inset-0 flex items-center justify-center bg-black/20 transition-opacity duration-300 ${
         showControls || !isPlaying ? 'opacity-100' : 'opacity-0'
       }`}>
-        <button
-          onClick={handlePlayPause}
-          className="bg-white/90 hover:bg-white text-black rounded-full p-4 transition-all duration-300 transform hover:scale-110"
-          aria-label={isPlaying ? 'Mettre en pause' : 'Lire la vidéo'}
-        >
-          {isPlaying ? (
-            <Pause className="h-8 w-8" />
-          ) : (
-            <Play className="h-8 w-8 ml-1" />
-          )}
-        </button>
+        <div className="flex items-center gap-4">
+          <button
+            onClick={handlePlayPause}
+            className="bg-white/90 hover:bg-white text-black rounded-full p-4 transition-all duration-300 transform hover:scale-110"
+            aria-label={isPlaying ? 'Mettre en pause' : 'Lire la vidéo'}
+          >
+            {isPlaying ? (
+              <Pause className="h-8 w-8" />
+            ) : (
+              <Play className="h-8 w-8 ml-1" />
+            )}
+          </button>
+          
+          {/* Fullscreen toggle */}
+          <button
+            onClick={toggleFullscreen}
+            className="bg-white/90 hover:bg-white text-black rounded-full p-3 transition-all duration-300 transform hover:scale-110"
+            aria-label={isFullscreen ? 'Quitter le plein écran' : 'Plein écran'}
+          >
+            {isFullscreen ? (
+              <Minimize className="h-6 w-6" />
+            ) : (
+              <Maximize className="h-6 w-6" />
+            )}
+          </button>
+        </div>
       </div>
       
       {/* Video Info Overlay */}
@@ -112,6 +191,11 @@ const OptimizedVideo: React.FC<OptimizedVideoProps> = ({
         <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
           <h4 className="text-white font-medium text-sm mb-1">{title}</h4>
           <p className="text-gray-300 text-xs">{description}</p>
+          {shouldAutoFullscreen && !isPlaying && (
+            <p className="text-yellow-300 text-xs mt-1">
+              📺 Lecture automatique en plein écran pour un meilleur confort
+            </p>
+          )}
         </div>
       )}
     </div>
