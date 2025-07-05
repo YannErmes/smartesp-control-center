@@ -8,10 +8,10 @@ const ModuleESP32CAMMB = () => {
   const { isDarkMode } = useTheme();
 
   const moduleImages = [
-    "https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&h=300&fit=crop",
-    "https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=400&h=300&fit=crop",
-    "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=300&fit=crop",
-    "https://images.unsplash.com/photo-1473091534298-04dcbce3278c?w=400&h=300&fit=crop"
+    "https://www.espboards.dev/img/tZwM_GR59U-764.webp?w=400&h=300&fit=crop",
+    "https://cdn.youcan.shop/stores/a5fe26d5d09b736a77f4345e9f80b951/others/CNPkkpkSANdOVGF1NeLD3MWHhNWtYZz0JNhdgOWx.png?w=400&h=300&fit=crop",
+    "https://www.diyengineers.com/wp-content/uploads/2023/03/ESP32-Cam-Pins.png?w=400&h=300&fit=crop",
+    "https://i0.wp.com/randomnerdtutorials.com/wp-content/uploads/2024/06/ESP32-CAM-FTDI-programmer.png?resize=828%2C502&quality=100&strip=all&ssl=1?w=400&h=300&fit=crop"
   ];
 
   return (
