@@ -3,7 +3,6 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link as RouterLink } from 'react-router-dom';
 import { useTheme } from '@/contexts/ThemeContext';
-import { ArrowRight } from 'lucide-react';
 import ImageZoom from './ImageZoom';
 
 const PresentationSection: React.FC = () => {
@@ -37,7 +36,6 @@ const PresentationSection: React.FC = () => {
       id="presentation"
       className={`py-20 relative ${isDarkMode ? 'bg-background' : 'bg-gray-50'}`}>
       <div className="absolute inset-0 bg-tech-pattern opacity-5 pointer-events-none"></div>
-      
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-3xl font-bold mb-2 text-gradient-primary text-center">
@@ -47,17 +45,12 @@ const PresentationSection: React.FC = () => {
             Une solution logicielle intuitive et puissante pour contrôler l'ensemble de votre écosystème ESP
           </p>
         </div>
-        
         <div className="grid md:grid-cols-2 gap-8 items-center">
-          <div className="order-2 md:order-1">
+          <div>
             <h3 className="text-2xl font-bold mb-4">Une plateforme unifiée</h3>
             <p className={`mb-4 ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>
-              SmartESP est une interface centrale qui simplifie le contrôle et la programmation de tous vos modules ESP. Fini les configurations complexes et les interfaces disparates, gérez l'ensemble de vos devices en un seul endroit.
+              SmartESP est une interface centrale qui simplifie le contrôle et la programmation de tous vos modules ESP.
             </p>
-            <p className={`mb-6 ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>
-              Conçue par des développeurs pour des développeurs, notre solution offre aussi bien une interface graphique intuitive que des systémes de communication robustes pour l'intégration avancée.
-            </p>
-            
             <h3 className="text-xl font-bold mb-3">Modules compatibles</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {compatibleModules.map((module, index) => (
@@ -65,11 +58,7 @@ const PresentationSection: React.FC = () => {
                   key={index}
                   as={RouterLink}
                   to={module.route}
-                  className={
-                    `neomorphic overflow-hidden hover:scale-105 transition-transform duration-300 cursor-pointer w-full p-0 text-left ${
-                      isDarkMode ? 'bg-[#151515] border-[#2a2a2a]' : 'bg-white'
-                    }`
-                  }
+                  className={`neomorphic w-full p-0 text-left ${isDarkMode ? 'bg-[#151515] border-[#2a2a2a]' : 'bg-white'}`}
                   style={{ minHeight: 90 }}
                   variant="ghost"
                 >
@@ -84,41 +73,8 @@ const PresentationSection: React.FC = () => {
                 </Button>
               ))}
             </div>
-            
-            <div className="mt-8 flex flex-col sm:flex-row gap-4">
-              <Button
-                as={RouterLink}
-                to="/modules/esp32simple"
-                className="flex-1 neomorphic bg-primary hover:bg-primary/90 neo-glow text-white w-full"
-              >
-                ESP32Simple
-                <ArrowRight className="h-4 w-4 ml-2" />
-              </Button>
-              <Button
-                as={RouterLink}
-                to="/modules/esp32cam-mb"
-                className="flex-1 neomorphic bg-accent hover:bg-accent/90 accent-glow text-white w-full"
-              >
-                ESP32CAM MB
-                <ArrowRight className="h-4 w-4 ml-2" />
-              </Button>
-              <Button
-                as={RouterLink}
-                to="/modules/esp8266"
-                variant="outline"
-                className={`flex-1 neomorphic w-full ${
-                  isDarkMode 
-                    ? 'border-[#333] hover:bg-[#222] text-gray-200' 
-                    : 'border-gray-300 hover:bg-gray-50 text-gray-700'
-                }`}
-              >
-                ESP8266
-                <ArrowRight className="h-4 w-4 ml-2" />
-              </Button>
-            </div>
           </div>
-          
-          <div className="order-1 md:order-2 flex justify-center">
+          <div className="flex justify-center">
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-accent/20 rounded-xl blur-3xl pointer-events-none"></div>
               <div className={`relative neomorphic rounded-xl p-1.5 w-full max-w-md aspect-square ${
