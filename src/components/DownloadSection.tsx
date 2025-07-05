@@ -19,7 +19,7 @@ const DownloadSection: React.FC = () => {
   return (
     <section id="download" className="py-20 relative bg-[#0a0a0a]">
       {/* Background pattern */}
-      <div className="absolute inset-0 bg-circuit-pattern opacity-5"></div>
+     // <div className="absolute inset-0 bg-circuit-pattern opacity-5"></div>
 
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center">
