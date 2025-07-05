@@ -57,7 +57,7 @@ const ConseilsCommunaute = () => {
     },
     {
       title: "Vérifier les tensions d'alimentation (3.3V / 5V)",
-      image: "https://www.researchgate.net/publication/359068957/figure/fig2/AS:1131088432893953@1646683905265/The-pin-diagram-of-DHT11-temperature-sensors.png?w=400&h=250&fit=crop",
+      image: "https://www.researchgate.net/publication/359068957/figure/fig2/AS:1131088432893953@1646683905265/The-pin-diagram-of-DHT11-temperature-sensors.png",
       description: "⚠️ Tous les composants ne supportent pas le 5V !"
     },
     {
