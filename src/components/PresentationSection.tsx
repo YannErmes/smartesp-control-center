@@ -10,11 +10,6 @@ const PresentationSection: React.FC = () => {
 
   const compatibleModules = [
     { 
-      name: 'ESP32CAM', 
-      description: 'Module caméra HD connecté',
-      route: '/modules/esp32cam'
-    },
-    { 
       name: 'ESP32Simple', 
       description: 'Microcontrôleur basique polyvalent',
       route: '/modules/esp32simple'
@@ -86,9 +81,7 @@ const PresentationSection: React.FC = () => {
                   alt="Circuit électronique ESP"
                   thumbnailClassName="rounded-lg object-cover w-full h-full"
                 />
-                <div className="absolute top-3 right-3 glass-morphism px-2 py-1 rounded-md text-xs font-mono text-white/90 pointer-events-none">
-                  ESP32CAM
-                </div>
+                {/* Badge retiré */}
               </div>
             </div>
           </div>
