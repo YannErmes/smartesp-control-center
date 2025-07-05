@@ -9,10 +9,10 @@ const ModuleESP32Simple = () => {
   const { isDarkMode } = useTheme();
 
   const moduleImages = [
-    "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=300&fit=crop",
-    "https://images.unsplash.com/photo-1473091534298-04dcbce3278c?w=400&h=300&fit=crop",
-    "https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&h=300&fit=crop",
-    "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400&h=300&fit=crop"
+    "https://www.okuelectronics.com/wp-content/uploads/2021/03/ESP32-Development-Board...jpg?w=400&h=300&fit=crop",
+    "https://5.imimg.com/data5/SELLER/Default/2023/10/354838092/LU/GP/KY/153669915/esp32-wroom-30pin-module-500x500.jpeg?w=400&h=300&fit=crop",
+    "https://preview.redd.it/what-is-the-difference-between-these-2-esp32-v0-8y8a1eluuk6e1.jpg?width=1080&crop=smart&auto=webp&s=03ee2689eafe81bdafa2a667b1fcb59e87991a40",
+    "https://www.researchgate.net/publication/373643331/figure/fig3/AS:11431281185914535@1693809247549/Major-Components-on-ESP32-Dev-Kit-V17.png?w=400&h=300&fit=crop"
   ];
 
   return (
