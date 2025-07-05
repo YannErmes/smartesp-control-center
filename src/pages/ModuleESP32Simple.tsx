@@ -81,10 +81,13 @@ const ModuleESP32Simple = () => {
               <h2 className="text-2xl font-bold text-gradient-primary">Code du module</h2>
             </div>
             <div className="text-center">
-              <Button className="neomorphic bg-primary hover:bg-primary/90 neo-glow text-white px-8 py-3">
-                <Code className="h-5 w-5 mr-2" />
-                Voir le code du module
-              </Button>
+             <Button
+  className="neomorphic bg-primary hover:bg-primary/90 neo-glow text-white px-8 py-3"
+  onClick={() => window.open('https://github.com/fe-webstore/Version-ESP32-projet-SmartESP', '_blank')}
+>
+  <Code className="h-5 w-5 mr-2" />
+  Voir le code du module
+</Button>
             </div>
           </div>
 
