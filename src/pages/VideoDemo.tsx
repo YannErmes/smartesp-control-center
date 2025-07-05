@@ -1,100 +1,118 @@
-
-import React from 'react';
+import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { ArrowLeft, Play, BookOpen, ExternalLink } from "lucide-react";
+import { ArrowLeft, BookOpen, ExternalLink } from "lucide-react";
 import { useTheme } from '@/contexts/ThemeContext';
+import OptimizedVideo from '@/components/OptimizedVideo';
 
 const VideoDemo = () => {
   const { isDarkMode } = useTheme();
+  const [currentPlayingVideo, setCurrentPlayingVideo] = useState<string | null>(null);
+
+  // Fonction pour gérer la lecture unique
+  const handleVideoPlay = (videoId: string) => {
+    setCurrentPlayingVideo(videoId);
+  };
 
   // Partie 1 : Vidéos de démonstration simples
   const demonstrationVideos = [
     {
-      id: 1,
-      title: "SmartESP affichage de valeur en temps réel de resistance du  joystick",
+      id: "demo-1",
+      title: "SmartESP affichage de valeur en temps réel de resistance du joystick",
       url: "https://fe-store.pro/smartESPgalerievidoe/1.mp4",
-      description: "Démonstration complète d'une maison connectée avec SmartESP"
+      description: "Démonstration complète d'une maison connectée avec SmartESP",
+      thumbnail: "https://fe-store.pro/smartESPgaleriephoto/4.jpg"
     },
     {
-      id: 2,
+      id: "demo-2", 
       title: "Test en temps réel - Surveillance caméra",
       url: "https://fe-store.pro/smartESPgalerievidoe/2.mp4",
-      description: "Test en direct d'un système de surveillance avec ESP32CAM"
+      description: "Test en direct d'un système de surveillance avec ESP32CAM",
+      thumbnail: "https://fe-store.pro/smartESPgaleriephoto/8.png"
     },
     {
-      id: 3,
-      title: "Démo capteurs environnementaux",
+      id: "demo-3",
+      title: "Démo capteurs environnementaux", 
       url: "https://fe-store.pro/smartESPgalerievidoe/3.mp4",
-      description: "Surveillance environnementale avec capteurs multiples"
+      description: "Surveillance environnementale avec capteurs multiples",
+      thumbnail: "https://fe-store.pro/smartESPgaleriephoto/6.jpg"
     },
     {
-      id: 4,
+      id: "demo-4",
       title: "Contrôle LED et automatisation",
-      url: "https://fe-store.pro/smartESPgalerievidoe/4.mp4",
-      description: "Automatisation d'éclairage intelligent avec ESP"
+      url: "https://fe-store.pro/smartESPgalerievidoe/4.mp4", 
+      description: "Automatisation d'éclairage intelligent avec ESP",
+      thumbnail: "https://fe-store.pro/smartESPgaleriephoto/9.jpg"
     },
     {
-      id: 5,
+      id: "demo-5",
       title: "Système d'alarme connecté",
       url: "https://fe-store.pro/smartESPgalerievidoe/5.mp4",
-      description: "Démonstration d'un système d'alarme complet"
+      description: "Démonstration d'un système d'alarme complet",
+      thumbnail: "https://fe-store.pro/smartESPgaleriephoto/11.png"
     },
     {
-      id: 6,
+      id: "demo-6",
       title: "Interface web temps réel",
       url: "https://fe-store.pro/smartESPgalerievidoe/6.mp4",
-      description: "Interface web pour contrôler tous vos modules ESP"
+      description: "Interface web pour contrôler tous vos modules ESP",
+      thumbnail: "https://fe-store.pro/smartESPgaleriephoto/Home.png"
     }
   ];
 
   // Partie 2 : Vidéos explicatives avec boutons d'interaction
   const explicativeVideos = [
     {
-      id: 7,
+      id: "tuto-1",
       title: "Configuration ESP32CAM",
       url: "https://fe-store.pro/smartESPgalerievidoe/video1.mp4",
       description: "Apprenez à configurer votre module ESP32CAM avec SmartESP",
+      thumbnail: "https://fe-store.pro/smartESPgaleriephoto/4.jpg",
       githubLink: "https://github.com/fe-webstore/",
       externalLink: "https://www.youtube.com/watch?v=example1"
     },
     {
-      id: 8,
+      id: "tuto-2",
       title: "Programmation ESP8266",
       url: "https://fe-store.pro/smartESPgalerievidoe/video2.mp4",
       description: "Guide complet pour programmer un ESP8266 avec SmartESP",
+      thumbnail: "https://fe-store.pro/smartESPgaleriephoto/8.png",
       githubLink: "https://github.com/fe-webstore/",
       externalLink: "https://www.youtube.com/watch?v=example2"
     },
     {
-      id: 9,
+      id: "tuto-3",
       title: "Intégration de capteurs",
       url: "https://fe-store.pro/smartESPgalerievidoe/video3.mp4",
       description: "Comment intégrer différents capteurs avec vos modules ESP",
+      thumbnail: "https://fe-store.pro/smartESPgaleriephoto/6.jpg",
       githubLink: "https://github.com/fe-webstore/",
       externalLink: "https://www.youtube.com/watch?v=example3"
     },
     {
-      id: 10,
+      id: "tuto-4",
       title: "Contrôle à distance",
       url: "https://fe-store.pro/smartESPgalerievidoe/video4.mp4",
       description: "Contrôlez vos modules ESP depuis n'importe où",
+      thumbnail: "https://fe-store.pro/smartESPgaleriephoto/9.jpg",
       githubLink: "https://github.com/fe-webstore/",
       externalLink: "https://www.youtube.com/watch?v=example4"
     },
     {
-      id: 11,
+      id: "tuto-5",
       title: "Projets IoT avancés",
       url: "https://fe-store.pro/smartESPgalerievidoe/video5.mp4",
       description: "Créez des projets IoT complexes avec SmartESP",
+      thumbnail: "https://fe-store.pro/smartESPgaleriephoto/11.png",
       githubLink: "https://github.com/fe-webstore/",
       externalLink: "https://www.youtube.com/watch?v=example5"
     },
     {
-      id: 12,
+      id: "tuto-6",
       title: "Débogage et optimisation",
       url: "https://fe-store.pro/smartESPgalerievidoe/video6.mp4",
       description: "Techniques de débogage et d'optimisation pour vos projets",
+      thumbnail: "https://fe-store.pro/smartESPgaleriephoto/Home.png",
       githubLink: "https://github.com/fe-webstore/",
       externalLink: "https://www.youtube.com/watch?v=example6"
     }
@@ -158,29 +176,14 @@ const VideoDemo = () => {
                 <h3 className="text-xl font-semibold mb-4 text-gradient-primary">
                   {video.title}
                 </h3>
-                <div className={`aspect-video rounded-lg mb-4 border overflow-hidden relative cursor-pointer ${
-                  isDarkMode ? 'bg-[#0a0a0a] border-[#333]' : 'bg-gray-100 border-gray-300'
-                }`}>
-                  {video.url ? (
-                    <video 
-                      controls 
-                      className="w-full h-full object-cover"
-                      poster="/placeholder.svg"
-                      preload="metadata"
-                    >
-                      <source src={video.url} type="video/mp4" />
-                      Your browser does not support the video tag.
-                    </video>
-                  ) : (
-                    <div className="w-full h-full flex items-center justify-center">
-                      <div className="text-center">
-                        <Play className={`h-12 w-12 mx-auto mb-2 ${isDarkMode ? 'text-gray-500' : 'text-gray-400'}`} />
-                        <p className={`text-sm ${isDarkMode ? 'text-gray-500' : 'text-gray-400'}`}>
-                          Vidéo bientôt disponible
-                        </p>
-                      </div>
-                    </div>
-                  )}
+                <div className="aspect-video rounded-lg mb-4 overflow-hidden">
+                  <OptimizedVideo
+                    src={video.url}
+                    title={video.title}
+                    description={video.description}
+                    thumbnail={video.thumbnail}
+                    onPlay={() => handleVideoPlay(video.id)}
+                  />
                 </div>
                 <p className={`text-sm ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>
                   {video.description}
@@ -207,26 +210,14 @@ const VideoDemo = () => {
                 <h3 className="text-xl font-semibold mb-4 text-gradient-primary">
                   {video.title}
                 </h3>
-                <div className={`aspect-video rounded-lg mb-4 border overflow-hidden relative ${
-                  isDarkMode ? 'bg-[#0a0a0a] border-[#333]' : 'bg-gray-100 border-gray-300'
-                }`}>
-                  {video.url ? (
-                    <video 
-                      className="w-full h-full object-cover"
-                      poster="/placeholder.svg"
-                      preload="metadata"
-                    >
-                      <source src={video.url} type="video/mp4" />
-                      Your browser does not support the video tag.
-                    </video>
-                  ) : (
-                    <div className="w-full h-full flex items-center justify-center">
-                      <Play className={`h-12 w-12 ${isDarkMode ? 'text-gray-500' : 'text-gray-400'}`} />
-                    </div>
-                  )}
-                  <div className="absolute inset-0 flex items-center justify-center bg-black/20 opacity-0 hover:opacity-100 transition-opacity duration-300">
-                    <Play className="h-16 w-16 text-white" />
-                  </div>
+                <div className="aspect-video rounded-lg mb-4 overflow-hidden">
+                  <OptimizedVideo
+                    src={video.url}
+                    title={video.title}
+                    description={video.description}
+                    thumbnail={video.thumbnail}
+                    onPlay={() => handleVideoPlay(video.id)}
+                  />
                 </div>
                 <p className={`text-sm mb-6 ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>
                   {video.description}

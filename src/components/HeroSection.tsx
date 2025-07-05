@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Link } from 'react-scroll';
@@ -54,7 +55,7 @@ const HeroSection: React.FC = () => {
                 </Button>
               </RouterLink>
             </div>
-          </div> {/* <-- This closing div was missing */}
+          </div>
           
           {/* Right column */}
           <div className="lg:w-1/2 flex flex-col items-center gap-8 fade-in-delay-1">
@@ -67,6 +68,8 @@ const HeroSection: React.FC = () => {
                     src="https://fe-store.pro/smartESPgaleriephoto/Home.png"
                     alt="SmartESP Application Screenshot"
                     className="w-full h-full object-cover"
+                    loading="lazy"
+                    decoding="async"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
                   <div className="absolute bottom-4 left-4 right-4">

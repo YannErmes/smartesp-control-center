@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -66,6 +65,8 @@ const ModuleESP32CAMMB = () => {
                     src={image}
                     alt={`ESP32CAM MB Image ${index + 1}`}
                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                    loading="lazy"
+                    decoding="async"
                   />
                 </div>
               ))}

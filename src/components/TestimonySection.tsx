@@ -102,6 +102,8 @@ const TestimonySection = () => {
                     src={testimonial.avatar}
                     alt={testimonial.name}
                     className="w-12 h-12 rounded-full mr-4 object-cover"
+                    loading="lazy"
+                    decoding="async"
                   />
                   <div>
                     <h4 className="font-semibold text-lg">

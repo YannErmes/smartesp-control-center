@@ -66,6 +66,8 @@ const ModuleESP32Simple = () => {
                     src={image}
                     alt={`ESP32 Simple Image ${index + 1}`}
                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                    loading="lazy"
+                    decoding="async"
                   />
                 </div>
               ))}

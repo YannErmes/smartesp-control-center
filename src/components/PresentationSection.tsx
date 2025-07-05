@@ -89,6 +89,8 @@ const PresentationSection: React.FC = () => {
                   src="https://i.postimg.cc/CMCcLNKK/Digital-Marketing-Agency-Facebook-Post-1.png"
                   alt="Circuit électronique ESP"
                   className="rounded-lg object-cover w-full h-full"
+                  loading="lazy"
+                  decoding="async"
                 />
                 <div className="absolute top-3 right-3 glass-morphism px-2 py-1 rounded-md text-xs font-mono text-white/90">
                   ESP32CAM

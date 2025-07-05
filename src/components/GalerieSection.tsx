@@ -1,32 +1,38 @@
 
 import { useState } from 'react';
-import { Dialog, DialogContent } from "@/components/ui/dialog";
+import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
+import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
     
 const images =[
   {
     url: "https://fe-store.pro/smartESPgaleriephoto/4.jpg",
     title: "Poubelle intelligente",
-    description: "Gestion automatique de l’ouverture de la poubelle via ESP et SmartESP"
+    description: "Gestion automatique de l'ouverture de la poubelle via ESP et SmartESP",
+    thumbnail: "https://fe-store.pro/smartESPgaleriephoto/4.jpg"
   },
   {
     url: "https://fe-store.pro/smartESPgaleriephoto/8.png",
     title: "Quann intelligent contrôlé par ESP via SmartESP",
-    description: "Système Quann piloté à distance grâce à un module ESP configuré avec SmartESP"
+    description: "Système Quann piloté à distance grâce à un module ESP configuré avec SmartESP",
+    thumbnail: "https://fe-store.pro/smartESPgaleriephoto/8.png"
   },
   {
     url: "https://fe-store.pro/smartESPgaleriephoto/6.jpg",
     title: "Circuit CNC contrôlé par SmartESP",
-    description: "Supervisation d’un circuit CNC à distance via interface  SmartESP et ESP8266"
+    description: "Supervisation d'un circuit CNC à distance via interface  SmartESP et ESP8266",
+    thumbnail: "https://fe-store.pro/smartESPgaleriephoto/6.jpg"
   },
   {
     url: "https://fe-store.pro/smartESPgaleriephoto/9.jpg",
     title: "Système de contrôle d'accès avec notifications grâce à SmartESP",
-    description: "Déclenchement d’ouverture de porte et envoi de notifications via ESP et SmartESP plus modification de code"
+    description: "Déclenchement d'ouverture de porte et envoi de notifications via ESP et SmartESP plus modification de code",
+    thumbnail: "https://fe-store.pro/smartESPgaleriephoto/9.jpg"
   },
   {
     url: "https://fe-store.pro/smartESPgaleriephoto/11.png",
     title: "Monitoring multi-ESP d'une voiture de surveillance",
-    description: "Surveillance mobile avec ESP8266 pour le contrôle et ESP32-CAM pour la vidéo"
+    description: "Surveillance mobile avec ESP8266 pour le contrôle et ESP32-CAM pour la vidéo",
+    thumbnail: "https://fe-store.pro/smartESPgaleriephoto/11.png"
   }
 ];
 
@@ -54,9 +60,11 @@ const GalerieSection = () => {
             >
               <div className="aspect-video relative">
                 <img 
-                  src={image.url}
+                  src={image.thumbnail}
                   alt={image.title}
                   className="w-full h-full object-cover"
+                  loading="lazy"
+                  decoding="async"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 hover:opacity-100 transition-opacity flex items-end">
                   <div className="p-4">
@@ -81,6 +89,9 @@ const GalerieSection = () => {
       
       <Dialog open={!!selectedImage} onOpenChange={() => setSelectedImage(null)}>
         <DialogContent className="glass-morphism border-0 max-w-4xl p-1">
+          <VisuallyHidden>
+            <DialogTitle>{selectedImage?.title || "Image de la galerie"}</DialogTitle>
+          </VisuallyHidden>
           <div className="relative">
             {selectedImage && (
               <>
@@ -88,6 +99,7 @@ const GalerieSection = () => {
                   src={selectedImage.url} 
                   alt={selectedImage.title}
                   className="w-full rounded-lg"
+                  loading="lazy"
                 />
                 <div className="absolute bottom-0 left-0 right-0 bg-black/70 p-4">
                   <h3 className="text-white text-lg font-medium">{selectedImage.title}</h3>
