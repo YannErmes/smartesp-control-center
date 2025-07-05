@@ -16,21 +16,21 @@ const VideoDemo = () => {
       title: "SmartESP affichage de valeur en temps réel de resistance du joystick",
       url: "https://fe-store.pro/smartESPgalerievidoe/1.mp4",
       description: "Démonstration complète d'une maison connectée avec SmartESP",
-      thumbnail: "https://fe-store.pro/smartESPgaleriephoto/4.jpg"
+      thumbnail: "https://i.postimg.cc/QCHvbCgY/Blue-Modern-Mobile-Application-Presentation.jpg"
     },
     {
       id: "demo-2", 
       title: "Test en temps réel - Surveillance caméra",
       url: "https://fe-store.pro/smartESPgalerievidoe/2.mp4",
       description: "Test en direct d'un système de surveillance avec ESP32CAM",
-      thumbnail: "https://fe-store.pro/smartESPgaleriephoto/8.png"
+      thumbnail: "https://i.postimg.cc/QCHvbCgY/Blue-Modern-Mobile-Application-Presentation.jpg"
     },
     {
       id: "demo-3",
       title: "Démo capteurs environnementaux", 
       url: "https://fe-store.pro/smartESPgalerievidoe/3.mp4",
       description: "Surveillance environnementale avec capteurs multiples",
-      thumbnail: "https://fe-store.pro/smartESPgaleriephoto/6.jpg"
+      thumbnail: "https://i.postimg.cc/QCHvbCgY/Blue-Modern-Mobile-Application-Presentation.jpg"
     },
     {
       id: "demo-4",
@@ -44,7 +44,7 @@ const VideoDemo = () => {
       title: "Système d'alarme connecté",
       url: "https://fe-store.pro/smartESPgalerievidoe/5.mp4",
       description: "Démonstration d'un système d'alarme complet",
-      thumbnail: "https://fe-store.pro/smartESPgaleriephoto/11.png"
+      thumbnail: "https://fe-store.pro/smartESPgaleriephoto/Home.png"
     },
     {
       id: "demo-6",
