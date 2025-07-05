@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
+import ImageZoom from './ImageZoom';
     
 const images =[
   {
@@ -37,8 +38,6 @@ const images =[
 ];
 
 const GalerieSection = () => {
-  const [selectedImage, setSelectedImage] = useState<(typeof images)[0] | null>(null);
-  
   return (
     <section id="galerie" className="py-20 relative">
       <div className="absolute inset-0 bg-tech-pattern opacity-5"></div>
@@ -55,18 +54,15 @@ const GalerieSection = () => {
           {images.map((image, index) => (
             <div 
               key={index} 
-              className="neomorphic rounded-xl overflow-hidden cursor-pointer transition-all duration-300 hover:scale-[1.02]"
-              onClick={() => setSelectedImage(image)}
+              className="neomorphic rounded-xl overflow-hidden transition-all duration-300 hover:scale-[1.02]"
             >
               <div className="aspect-video relative">
-                <img 
-                  src={image.thumbnail}
+                <ImageZoom
+                  src={image.url}
                   alt={image.title}
-                  className="w-full h-full object-cover"
-                  loading="lazy"
-                  decoding="async"
+                  thumbnailClassName="w-full h-full object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 hover:opacity-100 transition-opacity flex items-end">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 hover:opacity-100 transition-opacity flex items-end pointer-events-none">
                   <div className="p-4">
                     <h3 className="text-white font-medium">{image.title}</h3>
                     <p className="text-gray-300 text-sm">{image.description}</p>
@@ -86,30 +82,6 @@ const GalerieSection = () => {
           </div>
         </div>
       </div>
-      
-      <Dialog open={!!selectedImage} onOpenChange={() => setSelectedImage(null)}>
-        <DialogContent className="glass-morphism border-0 max-w-4xl p-1">
-          <VisuallyHidden>
-            <DialogTitle>{selectedImage?.title || "Image de la galerie"}</DialogTitle>
-          </VisuallyHidden>
-          <div className="relative">
-            {selectedImage && (
-              <>
-                <img 
-                  src={selectedImage.url} 
-                  alt={selectedImage.title}
-                  className="w-full rounded-lg"
-                  loading="lazy"
-                />
-                <div className="absolute bottom-0 left-0 right-0 bg-black/70 p-4">
-                  <h3 className="text-white text-lg font-medium">{selectedImage.title}</h3>
-                  <p className="text-gray-300">{selectedImage.description}</p>
-                </div>
-              </>
-            )}
-          </div>
-        </DialogContent>
-      </Dialog>
     </section>
   );
 };

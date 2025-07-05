@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from 'react-scroll';
 import { Link as RouterLink } from 'react-router-dom';
 import { Download } from 'lucide-react';
+import ImageZoom from './ImageZoom';
 
 const HeroSection: React.FC = () => {
   return (
@@ -64,15 +65,13 @@ const HeroSection: React.FC = () => {
               <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-accent/20 rounded-2xl blur-3xl transform rotate-3"></div>
               <div className="neomorphic rounded-2xl p-4 bg-[#151515] relative z-10 transform hover:scale-[1.02] transition-transform duration-500">
                 <div className="aspect-[4/3] rounded-xl overflow-hidden border border-[#333] bg-gradient-to-br from-[#0a0a0a] to-[#1a1a1a]">
-                  <img
+                  <ImageZoom
                     src="https://fe-store.pro/smartESPgaleriephoto/Home.png"
                     alt="SmartESP Application Screenshot"
-                    className="w-full h-full object-cover"
-                    loading="lazy"
-                    decoding="async"
+                    thumbnailClassName="w-full h-full object-cover"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-                  <div className="absolute bottom-4 left-4 right-4">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent pointer-events-none"></div>
+                  <div className="absolute bottom-4 left-4 right-4 pointer-events-none">
                     <div className="flex items-center gap-2 mb-2">
                       <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
                       <span className="text-xs text-green-400 font-mono">SmartESP Dashboard</span>

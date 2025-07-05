@@ -1,9 +1,21 @@
+
 import React from 'react';
 import { Button } from "@/components/ui/button";
-import { Download, Users } from 'lucide-react';
+import { Download, Users, ExternalLink } from 'lucide-react';
 import { Link as RouterLink } from 'react-router-dom';
 
 const DownloadSection: React.FC = () => {
+  const handleDownload = (url: string, filename: string) => {
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = filename;
+    link.target = '_blank';
+    link.rel = 'noopener noreferrer';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <section id="download" className="py-20 relative bg-[#0a0a0a]">
       {/* Background pattern */}
@@ -22,21 +34,16 @@ const DownloadSection: React.FC = () => {
           <div className="grid md:grid-cols-2 gap-6 mb-8">
             {/* SmartESP APK */}
             <div className="neomorphic bg-[#151515] border-[#2a2a2a] rounded-xl p-8">
-              <h3 className="text-xl font-bold mb-4 text-gradient-primary">SmartESP V0.1</h3>
+              <h3 className="text-xl font-bold mb-4 text-gradient-primary">SmartESP V0.2</h3>
               <p className="text-gray-400 mb-6">
                 L'application principale avec toutes les fonctionnalités pour contrôler vos modules ESP
               </p>
-              <Button className="w-full neomorphic bg-accent hover:bg-accent/90 accent-glow text-white p-0 overflow-hidden">
-                <a
-                  href="https://fe-store.pro/appapk/Smart_ESP_V02.apk"
-                  download
-                  rel="noopener noreferrer"
-                  type="application/vnd.android.package-archive"
-                  className="flex items-center justify-center w-full h-full px-4 py-2 text-white"
-                >
-                  <Download className="h-4 w-4 mr-2" />
-                  Télécharger Smart ESP V0.2
-                </a>
+              <Button 
+                className="w-full neomorphic bg-accent hover:bg-accent/90 accent-glow text-white"
+                onClick={() => handleDownload('https://fe-store.pro/appapk/Smart_ESP_V02.apk', 'Smart_ESP_V02.apk')}
+              >
+                <Download className="h-4 w-4 mr-2" />
+                Télécharger Smart ESP V0.2
               </Button>
             </div>
 
@@ -46,17 +53,34 @@ const DownloadSection: React.FC = () => {
               <p className="text-gray-400 mb-6">
                 Les drivers nécessaires pour une communication optimale avec vos modules ESP
               </p>
-              <Button className="w-full neomorphic bg-accent hover:bg-accent/90 accent-glow text-white p-0 overflow-hidden">
-                <a
-                  href="https://fe-store.pro/appapk/CH341SER.EXE"
-                  download
-                  rel="noopener noreferrer"
-                  type="application/x-msdownload"
-                  className="flex items-center justify-center w-full h-full px-4 py-2 text-white"
-                >
-                  <Download className="h-4 w-4 mr-2" />
-                  Télécharger ESP DRIVER
-                </a>
+              <Button 
+                className="w-full neomorphic bg-accent hover:bg-accent/90 accent-glow text-white"
+                onClick={() => handleDownload('https://fe-store.pro/appapk/CH341SER.EXE', 'CH341SER.EXE')}
+              >
+                <Download className="h-4 w-4 mr-2" />
+                Télécharger ESP DRIVER
+              </Button>
+            </div>
+          </div>
+
+          {/* Additional download options */}
+          <div className="mb-8">
+            <div className="grid sm:grid-cols-2 gap-4">
+              <Button 
+                variant="outline" 
+                className="neomorphic hover:neo-glow text-gray-200"
+                onClick={() => window.open('https://fe-store.pro/appapk/Smart_ESP_V02.apk', '_blank')}
+              >
+                <ExternalLink className="h-4 w-4 mr-2" />
+                Téléchargement direct APK
+              </Button>
+              <Button 
+                variant="outline" 
+                className="neomorphic hover:neo-glow text-gray-200"
+                onClick={() => window.open('https://fe-store.pro/appapk/CH341SER.EXE', '_blank')}
+              >
+                <ExternalLink className="h-4 w-4 mr-2" />
+                Téléchargement direct Driver
               </Button>
             </div>
           </div>

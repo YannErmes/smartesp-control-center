@@ -1,8 +1,11 @@
 
 import React from 'react';
 import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 import { Link as RouterLink } from 'react-router-dom';
 import { useTheme } from '@/contexts/ThemeContext';
+import { ArrowRight } from 'lucide-react';
+import ImageZoom from './ImageZoom';
 
 const PresentationSection: React.FC = () => {
   const { isDarkMode } = useTheme();
@@ -77,6 +80,32 @@ const PresentationSection: React.FC = () => {
                 </RouterLink>
               ))}
             </div>
+            
+            {/* Boutons de navigation entre modules */}
+            <div className="mt-8 flex flex-col sm:flex-row gap-4">
+              <RouterLink to="/modules/esp32cam" className="flex-1">
+                <Button className="w-full neomorphic bg-primary hover:bg-primary/90 neo-glow text-white">
+                  ESP32CAM
+                  <ArrowRight className="h-4 w-4 ml-2" />
+                </Button>
+              </RouterLink>
+              <RouterLink to="/modules/esp32simple" className="flex-1">
+                <Button className="w-full neomorphic bg-accent hover:bg-accent/90 accent-glow text-white">
+                  ESP32Simple
+                  <ArrowRight className="h-4 w-4 ml-2" />
+                </Button>
+              </RouterLink>
+              <RouterLink to="/modules/esp8266" className="flex-1">
+                <Button variant="outline" className={`w-full neomorphic ${
+                  isDarkMode 
+                    ? 'border-[#333] hover:bg-[#222] text-gray-200' 
+                    : 'border-gray-300 hover:bg-gray-50 text-gray-700'
+                }`}>
+                  ESP8266
+                  <ArrowRight className="h-4 w-4 ml-2" />
+                </Button>
+              </RouterLink>
+            </div>
           </div>
           
           <div className="order-1 md:order-2 flex justify-center">
@@ -85,14 +114,12 @@ const PresentationSection: React.FC = () => {
               <div className={`relative neomorphic rounded-xl p-1.5 w-full max-w-md aspect-square ${
                 isDarkMode ? 'bg-[#151515]' : 'bg-white'
               }`}>
-                <img
+                <ImageZoom
                   src="https://i.postimg.cc/CMCcLNKK/Digital-Marketing-Agency-Facebook-Post-1.png"
                   alt="Circuit électronique ESP"
-                  className="rounded-lg object-cover w-full h-full"
-                  loading="lazy"
-                  decoding="async"
+                  thumbnailClassName="rounded-lg object-cover w-full h-full"
                 />
-                <div className="absolute top-3 right-3 glass-morphism px-2 py-1 rounded-md text-xs font-mono text-white/90">
+                <div className="absolute top-3 right-3 glass-morphism px-2 py-1 rounded-md text-xs font-mono text-white/90 pointer-events-none">
                   ESP32CAM
                 </div>
               </div>

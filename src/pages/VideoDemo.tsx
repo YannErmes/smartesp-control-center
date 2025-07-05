@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+
+import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { ArrowLeft, BookOpen, ExternalLink } from "lucide-react";
@@ -7,12 +8,6 @@ import OptimizedVideo from '@/components/OptimizedVideo';
 
 const VideoDemo = () => {
   const { isDarkMode } = useTheme();
-  const [currentPlayingVideo, setCurrentPlayingVideo] = useState<string | null>(null);
-
-  // Fonction pour gérer la lecture unique
-  const handleVideoPlay = (videoId: string) => {
-    setCurrentPlayingVideo(videoId);
-  };
 
   // Partie 1 : Vidéos de démonstration simples
   const demonstrationVideos = [
@@ -182,7 +177,7 @@ const VideoDemo = () => {
                     title={video.title}
                     description={video.description}
                     thumbnail={video.thumbnail}
-                    onPlay={() => handleVideoPlay(video.id)}
+                    videoId={video.id}
                   />
                 </div>
                 <p className={`text-sm ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>
@@ -216,7 +211,7 @@ const VideoDemo = () => {
                     title={video.title}
                     description={video.description}
                     thumbnail={video.thumbnail}
-                    onPlay={() => handleVideoPlay(video.id)}
+                    videoId={video.id}
                   />
                 </div>
                 <p className={`text-sm mb-6 ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>

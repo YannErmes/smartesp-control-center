@@ -1,6 +1,7 @@
 
 import React, { useState, useRef, useEffect } from 'react';
 import { Play, Pause } from 'lucide-react';
+import { useVideo } from '@/contexts/VideoContext';
 
 interface OptimizedVideoProps {
   src: string;
@@ -8,7 +9,7 @@ interface OptimizedVideoProps {
   description: string;
   thumbnail?: string;
   className?: string;
-  onPlay?: () => void;
+  videoId: string;
 }
 
 const OptimizedVideo: React.FC<OptimizedVideoProps> = ({
@@ -17,21 +18,30 @@ const OptimizedVideo: React.FC<OptimizedVideoProps> = ({
   description,
   thumbnail,
   className = "",
-  onPlay
+  videoId
 }) => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [showControls, setShowControls] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
+  const { currentPlayingVideo, setCurrentPlayingVideo } = useVideo();
+
+  useEffect(() => {
+    if (currentPlayingVideo && currentPlayingVideo !== videoId && isPlaying) {
+      if (videoRef.current) {
+        videoRef.current.pause();
+        setIsPlaying(false);
+      }
+    }
+  }, [currentPlayingVideo, videoId, isPlaying]);
 
   const handlePlayPause = () => {
     if (videoRef.current) {
       if (isPlaying) {
         videoRef.current.pause();
         setIsPlaying(false);
+        setCurrentPlayingVideo(null);
       } else {
-        if (onPlay) {
-          onPlay(); // This will pause other videos
-        }
+        setCurrentPlayingVideo(videoId);
         videoRef.current.play();
         setIsPlaying(true);
       }
@@ -41,6 +51,7 @@ const OptimizedVideo: React.FC<OptimizedVideoProps> = ({
   const handleVideoEnd = () => {
     setIsPlaying(false);
     setShowControls(false);
+    setCurrentPlayingVideo(null);
   };
 
   useEffect(() => {
@@ -60,14 +71,6 @@ const OptimizedVideo: React.FC<OptimizedVideoProps> = ({
       };
     }
   }, []);
-
-  // External pause function that can be called by parent
-  useEffect(() => {
-    const video = videoRef.current;
-    if (video && !isPlaying) {
-      video.pause();
-    }
-  }, [isPlaying]);
 
   return (
     <div 
