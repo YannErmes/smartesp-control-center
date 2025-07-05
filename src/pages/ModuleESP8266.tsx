@@ -8,10 +8,10 @@ const ModuleESP8266 = () => {
   const { isDarkMode } = useTheme();
 
   const moduleImages = [
-    "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400&h=300&fit=crop",
-    "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=300&fit=crop",
-    "https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&h=300&fit=crop",
-    "https://images.unsplash.com/photo-1473091534298-04dcbce3278c?w=400&h=300&fit=crop"
+    "https://www.flyrobo.in/image/cache/catalog/blog/nodemcu-esp8266/F7KRNQQIVO7WQ8V-600x315w.jpg",
+    "https://www.elecrow.com/media/catalog/product/cache/b6b9577937e6a96f50e53ddc42983628/d/p/dpo28090b_nodemcu_v2_esp8266_development_board_01.jpg",
+    "https://kunkune.co.uk/wp-content/uploads/2023/10/0.96-Display-ESP8266-NodeMCU-Board-min.jpg",
+    "https://electropeak.com/learn/wp-content/uploads/2023/05/NodeMCU_ADC_PWM_LED-1200x750.jpg"
   ];
 
   return (
@@ -80,10 +80,13 @@ const ModuleESP8266 = () => {
               <h2 className="text-2xl font-bold text-gradient-primary">Code du module</h2>
             </div>
             <div className="text-center">
-              <Button className="neomorphic bg-primary hover:bg-primary/90 neo-glow text-white px-8 py-3">
-                <Code className="h-5 w-5 mr-2" />
-                Voir le code du module
-              </Button>
+              <Button
+  className="neomorphic bg-primary hover:bg-primary/90 neo-glow text-white px-8 py-3"
+  onClick={() => window.open('https://github.com/fe-webstore/Version-ESP8266-projet-SmartESP', '_blank')}
+>
+  <Code className="h-5 w-5 mr-2" />
+  Voir le code du module
+</Button>
             </div>
           </div>
 
