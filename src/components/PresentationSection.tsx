@@ -56,20 +56,21 @@ const PresentationSection: React.FC = () => {
               {compatibleModules.map((module, index) => (
                 <Button
                   key={index}
-                  as={RouterLink}
-                  to={module.route}
+                  asChild
                   className={`neomorphic w-full p-0 text-left ${isDarkMode ? 'bg-[#151515] border-[#2a2a2a]' : 'bg-white'}`}
                   style={{ minHeight: 90 }}
                   variant="ghost"
                 >
-                  <Card className="w-full bg-transparent border-0 shadow-none">
-                    <CardContent className="p-4">
-                      <h4 className="text-primary font-mono font-medium">{module.name}</h4>
-                      <p className={`text-sm ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>
-                        {module.description}
-                      </p>
-                    </CardContent>
-                  </Card>
+                  <RouterLink to={module.route}>
+                    <Card className="w-full bg-transparent border-0 shadow-none">
+                      <CardContent className="p-4">
+                        <h4 className="text-primary font-mono font-medium">{module.name}</h4>
+                        <p className={`text-sm ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>
+                          {module.description}
+                        </p>
+                      </CardContent>
+                    </Card>
+                  </RouterLink>
                 </Button>
               ))}
             </div>
