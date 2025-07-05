@@ -1,4 +1,3 @@
-
 import React, { useState, useRef, useEffect } from 'react';
 import { Play, Pause, Maximize, Minimize } from 'lucide-react';
 import { useVideo } from '@/contexts/VideoContext';
@@ -139,8 +138,6 @@ const OptimizedVideo: React.FC<OptimizedVideoProps> = ({
     <div 
       ref={containerRef}
       className={`relative group ${className} ${isFullscreen ? 'bg-black' : ''}`}
-      onMouseEnter={() => setShowControls(true)}
-      onMouseLeave={() => setShowControls(false)}
     >
       <video
         ref={videoRef}
@@ -154,9 +151,9 @@ const OptimizedVideo: React.FC<OptimizedVideoProps> = ({
         Votre navigateur ne supporte pas la lecture vidéo.
       </video>
       
-      {/* Play/Pause Overlay */}
+      {/* Play/Pause Overlay - Only show when not playing or when controls are explicitly shown */}
       <div className={`absolute inset-0 flex items-center justify-center bg-black/20 transition-opacity duration-300 ${
-        showControls || !isPlaying ? 'opacity-100' : 'opacity-0'
+        !isPlaying ? 'opacity-100' : 'opacity-0'
       }`}>
         <div className="flex items-center gap-4">
           <button
@@ -186,12 +183,12 @@ const OptimizedVideo: React.FC<OptimizedVideoProps> = ({
         </div>
       </div>
       
-      {/* Video Info Overlay */}
-      {showControls && (
+      {/* Video Info Overlay - Only show when not playing */}
+      {!isPlaying && (
         <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
           <h4 className="text-white font-medium text-sm mb-1">{title}</h4>
           <p className="text-gray-300 text-xs">{description}</p>
-          {shouldAutoFullscreen && !isPlaying && (
+          {shouldAutoFullscreen && (
             <p className="text-yellow-300 text-xs mt-1">
               📺 Lecture automatique en plein écran pour un meilleur confort
             </p>
