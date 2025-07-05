@@ -63,7 +63,7 @@ const ConseilsCommunaute = () => {
     {
       title: "Débogage et Diagnostic",
       image: "https://i.postimg.cc/hvFJ0zTp/Capture-d-cran-2025-07-05-141915.png?w=400&h=250&fit=crop",
-      description: "Techniques avancées de débogage pour identifier et résoudre rapidement les problèmes de communication."
+      description: " Pour résoudre rapidement les problèmes de communication  utilisé le driver ESP."
     },
     {
       title: " Éviter de brancher des modules à chaud",
