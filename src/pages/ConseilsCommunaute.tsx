@@ -57,12 +57,12 @@ const ConseilsCommunaute = () => {
     },
     {
       title: "Vérifier les tensions d'alimentation (3.3V / 5V)",
-      image: "https://www.researchgate.net/publication/359068957/figure/fig2/AS:1131088432893953@1646683905265/The-pin-diagram-of-DHT11-temperature-sensors.png",
+      image: "https://www.researchgate.net/publication/359068957/figure/fig2/AS:1131088432893953@1646683905265/The-pin-diagram-of-DHT11-temperature-sensors.pngw=400&h=250&fit=crop",
       description: "⚠️ Tous les composants ne supportent pas le 5V !"
     },
     {
       title: "Débogage et Diagnostic",
-      image: "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=400&h=250&fit=crop",
+      image: "https://i.postimg.cc/hvFJ0zTp/Capture-d-cran-2025-07-05-141915.png?w=400&h=250&fit=crop",
       description: "Techniques avancées de débogage pour identifier et résoudre rapidement les problèmes de communication."
     },
     {
@@ -159,7 +159,7 @@ const ConseilsCommunaute = () => {
                 <a href="https://chat.whatsapp.com/BYFnSgoU8BqEDmtuJMhp3k" className="text-primary hover:text-primary/80 transition-colors">
                   Forum whatsapp
                 </a>
-                <a href="https://github.com/YannErmes" className="text-primary hover:text-primary/80 transition-colors">
+                <a href="https://github.com/fe-webstore" className="text-primary hover:text-primary/80 transition-colors">
                   GitHub
                 </a>
               </div>
