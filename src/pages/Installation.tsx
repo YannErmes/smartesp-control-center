@@ -411,7 +411,7 @@ const Installation = () => {
 
         {/* 👉 Nouveau bouton Librairie de Composants */}
         <div className="text-center mt-12">
-          <Link to="/@fe-webstore/Code_composants">
+          <Link to="https://github.com/fe-webstore/Code_composants">
             <Button className="neomorphic bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 text-lg transition-all duration-300 hover:neo-glow">
               📚 Accéder à la Librairie de Composants
             </Button>
