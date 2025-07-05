@@ -371,6 +371,7 @@ const Installation = () => {
         </div>
 
         {/* Composants Électroniques Section */}
+           
         <div className="max-w-6xl mx-auto mt-20">
           <div className="text-center mb-12">
             <div className="flex items-center justify-center gap-3 mb-6">
@@ -407,6 +408,16 @@ const Installation = () => {
             ))}
           </div>
         </div>
+
+        {/* 👉 Nouveau bouton Librairie de Composants */}
+        <div className="text-center mt-12">
+          <Link to="/@fe-webstore/Code_composants">
+            <Button className="neomorphic bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 text-lg transition-all duration-300 hover:neo-glow">
+              📚 Accéder à la Librairie de Composants
+            </Button>
+          </Link>
+        </div>
+
 
         {/* Guides PDF Gratuits Section */}
         <div className="max-w-6xl mx-auto mt-20">
