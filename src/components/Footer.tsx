@@ -70,11 +70,10 @@ const Footer = () => {
           <div>
             <h3 className="text-white font-semibold mb-4 text-lg">Ressources</h3>
             <ul className="space-y-2 text-gray-400">
-              <li><a href="#" className="hover:text-primary transition-colors">Documentation</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">API Reference</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Tutoriels</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Exemples de Projets</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Support Communautaire</a></li>
+          
+              <li><a href="https://www.youtube.com/@iotdiysmartesp/" className="hover:text-primary transition-colors">Tutoriels</a></li>
+              <li><a href="https://www.youtube.com/@iotdiysmartesp/playlists" className="hover:text-primary transition-colors">Exemples de Projets</a></li>
+             
             </ul>
           </div>
         </div>
@@ -82,9 +81,9 @@ const Footer = () => {
         <div className="mt-10 pt-6 border-t border-[#222] flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-500 text-sm">© {new Date().getFullYear()} SmartESP. Tous droits réservés.</p>
           <div className="mt-4 md:mt-0 flex space-x-6">
-            <a href="#" className="text-gray-500 text-sm hover:text-gray-400">Confidentialité</a>
+{/*             <a href="#" className="text-gray-500 text-sm hover:text-gray-400">Confidentialité</a>
             <a href="#" className="text-gray-500 text-sm hover:text-gray-400">Conditions d'utilisation</a>
-            <a href="#" className="text-gray-500 text-sm hover:text-gray-400">Mentions légales</a>
+            <a href="#" className="text-gray-500 text-sm hover:text-gray-400">Mentions légales</a> */}
           </div>
         </div>
       </div>
