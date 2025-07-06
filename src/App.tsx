@@ -14,6 +14,7 @@ import ModuleESP32CAM from "./pages/ModuleESP32CAM";
 import ModuleESP32Simple from "./pages/ModuleESP32Simple";
 import ModuleESP32CAMMB from "./pages/ModuleESP32CAMMB";
 import ModuleESP8266 from "./pages/ModuleESP8266";
+import ProjectLibrary from "./pages/ProjectLibrary";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -35,6 +36,7 @@ const App = () => (
               <Route path="/modules/esp32simple" element={<ModuleESP32Simple />} />
               <Route path="/modules/esp32cam-mb" element={<ModuleESP32CAMMB />} />
               <Route path="/modules/esp8266" element={<ModuleESP8266 />} />
+              <Route path="/projets" element={<ProjectLibrary />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>
