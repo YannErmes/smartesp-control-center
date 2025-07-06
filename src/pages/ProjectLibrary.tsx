@@ -18,9 +18,9 @@ const projects = [
   },
   {
     id: 2,
-    title: "Module ESP8266",
-    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&h=300&fit=crop",
-    codeUrl: "https://github.com/example/esp8266",
+    title: null, // Projet pas encore disponible
+    image: null,
+    codeUrl: "#",
     available: false
   },
   {
@@ -32,9 +32,9 @@ const projects = [
   },
   {
     id: 4,
-    title: "Capteur IoT Avancé",
-    image: null, // Image pas encore disponible
-    codeUrl: "https://github.com/example/iot-sensor",
+     title: null, // Projet pas encore disponible
+    image: null,
+    codeUrl: "#",
     available: false
   },
   {
@@ -46,9 +46,9 @@ const projects = [
   },
   {
     id: 6,
-    title: "Station Météo Connectée",
-    image: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=400&h=300&fit=crop",
-    codeUrl: "https://github.com/example/weather-station",
+    title: null, // Projet pas encore disponible
+    image: null,
+    codeUrl: "#",
     available: false
   }
 ];
