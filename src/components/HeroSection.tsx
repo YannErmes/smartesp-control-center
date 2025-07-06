@@ -1,8 +1,9 @@
+
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Link } from 'react-scroll';
 import { Link as RouterLink } from 'react-router-dom';
-import { Download } from 'lucide-react';
+import { Download, BookOpen, Code2 } from 'lucide-react';
 import ImageZoom from './ImageZoom';
 
 const HeroSection: React.FC = () => {
@@ -42,16 +43,28 @@ const HeroSection: React.FC = () => {
               Une interface intuitive pour gérer l'ensemble de vos modules ESP32CAM, ESP32Simple et autres appareils compatibles de manière centralisée.
             </p>
             <div className="flex flex-wrap gap-4 mb-8">
+              <RouterLink to="/projets">
+                <Button className="neomorphic bg-primary hover:bg-primary/90 neo-glow text-white px-8 py-6" size="lg">
+                  <Code2 className="h-5 w-5 mr-2" />
+                  Voir les Projets
+                </Button>
+              </RouterLink>
+              <RouterLink to="/installation">
+                <Button variant="outline" className="neomorphic hover:neo-glow px-8 py-6" size="lg">
+                  <BookOpen className="h-5 w-5 mr-2" />
+                  Documentation
+                </Button>
+              </RouterLink>
               <a
                 href="https://github.com/fe-webstore"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Button className="neomorphic bg-primary hover:bg-primary/90 neo-glow text-white px-8 py-6" size="lg">
+                <Button variant="ghost" className="neomorphic hover:neo-glow text-white px-8 py-6" size="lg">
                   <svg className="h-5 w-5 mr-2" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089..." fill="currentColor"/>
                   </svg>
-                  Découvrir sur GitHub
+                  GitHub
                 </Button>
               </a>
             </div>
