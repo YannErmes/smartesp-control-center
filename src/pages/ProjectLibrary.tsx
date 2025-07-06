@@ -3,7 +3,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Code2, ExternalLink } from 'lucide-react';
+import { Code2, ExternalLink, Play } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
@@ -14,6 +14,7 @@ const projects = [
     title: "Module ESP32-CAM",
     image: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=400&h=300&fit=crop",
     codeUrl: "https://github.com/example/esp32-cam",
+    videoUrl: "https://www.youtube.com/watch?v=example",
     available: true
   },
   {
@@ -21,6 +22,7 @@ const projects = [
     title: null, // Projet pas encore disponible
     image: null,
     codeUrl: "#",
+    videoUrl: null,
     available: false
   },
   {
@@ -28,6 +30,7 @@ const projects = [
     title: null, // Projet pas encore disponible
     image: null,
     codeUrl: "#",
+    videoUrl: null,
     available: false
   },
   {
@@ -35,6 +38,7 @@ const projects = [
      title: null, // Projet pas encore disponible
     image: null,
     codeUrl: "#",
+    videoUrl: null,
     available: false
   },
   {
@@ -42,6 +46,7 @@ const projects = [
     title: null, // Projet pas encore disponible
     image: null,
     codeUrl: "#",
+    videoUrl: null,
     available: false
   },
   {
@@ -49,6 +54,7 @@ const projects = [
     title: null, // Projet pas encore disponible
     image: null,
     codeUrl: "#",
+    videoUrl: null,
     available: false
   }
 ];
@@ -127,6 +133,34 @@ const ProjectLibrary = () => {
                     >
                       <Code2 className="h-4 w-4 mr-2" />
                       Code pas encore disponible
+                    </Button>
+                  )}
+                  
+                  {project.available && project.videoUrl ? (
+                    <Button 
+                      asChild 
+                      className="w-full group/btn"
+                      variant="outline"
+                    >
+                      <a 
+                        href={project.videoUrl} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="flex items-center justify-center gap-2"
+                      >
+                        <Play className="h-4 w-4" />
+                        Voir la vidéo
+                        <ExternalLink className="h-3 w-3 group-hover/btn:translate-x-1 transition-transform" />
+                      </a>
+                    </Button>
+                  ) : (
+                    <Button 
+                      disabled 
+                      className="w-full"
+                      variant="secondary"
+                    >
+                      <Play className="h-4 w-4 mr-2" />
+                      Vidéo pas encore disponible
                     </Button>
                   )}
                 </div>
