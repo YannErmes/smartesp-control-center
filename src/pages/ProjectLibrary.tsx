@@ -11,9 +11,9 @@ import Footer from '@/components/Footer';
 const projects = [
   {
     id: 1,
-    title: "Module ESP32-CAM",
-    image: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=400&h=300&fit=crop",
-    codeUrl: "https://github.com/example/esp32-cam",
+    title: "Maison intelligente :Contrôle Salon, Chambre, Cuisine avec ESP (Débutant)",
+    image: "https://i.postimg.cc/qMZmHCS1/create-a-futuristic-and-eye-catching-thumbnail-for-1.jpg",
+    codeUrl: "https://github.com/fe-webstore/Commande_des_leds_par_smartphone",
     videoUrl: "https://www.youtube.com/watch?v=example",
     available: true
   },
