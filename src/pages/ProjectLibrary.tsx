@@ -14,7 +14,7 @@ const projects = [
     title: "Maison intelligente :Contrôle Salon, Chambre, Cuisine avec ESP (Débutant)",
     image: "https://i.postimg.cc/qMZmHCS1/create-a-futuristic-and-eye-catching-thumbnail-for-1.jpg",
     codeUrl: "https://github.com/fe-webstore/Commande_des_leds_par_smartphone",
-    videoUrl: "https://www.youtube.com/watch?v=example",
+    videoUrl: "https://youtu.be/bTD2IeDa4fk",
     available: true
   },
   {
