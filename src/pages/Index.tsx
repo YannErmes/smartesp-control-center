@@ -15,11 +15,7 @@ const Index = () => {
   const { isDarkMode } = useTheme();
   
   return (
-    <div className={`min-h-screen transition-colors duration-300 ${
-      isDarkMode 
-        ? 'bg-background text-foreground' 
-        : 'bg-gray-50 text-gray-900'
-    }`}>
+    <div className="min-h-screen bg-background text-foreground transition-colors duration-300">
       <Header />
       <HeroSection />
       <PresentationSection />

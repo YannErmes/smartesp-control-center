@@ -78,11 +78,7 @@ const ConseilsCommunaute = () => {
   ];
 
   return (
-    <div className={`min-h-screen transition-colors duration-300 ${
-      isDarkMode 
-        ? 'bg-background text-foreground' 
-        : 'bg-gray-50 text-gray-900'
-    }`}>
+    <div className="min-h-screen bg-background text-foreground transition-colors duration-300">
       {/* Header */}
       <header className={`py-4 border-b transition-colors duration-300 ${
         isDarkMode ? 'border-[#222]' : 'border-gray-200'
