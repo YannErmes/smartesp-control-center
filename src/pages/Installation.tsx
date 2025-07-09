@@ -180,6 +180,31 @@ const Installation = () => {
     window.open(viewerUrl, '_blank', 'width=1000,height=800,scrollbars=yes,resizable=yes');
   };
 
+  const downloadImage = async (imageUrl: string, filename: string) => {
+    try {
+      const response = await fetch(imageUrl);
+      const blob = await response.blob();
+      
+      // Create a temporary URL for the blob
+      const url = window.URL.createObjectURL(blob);
+      
+      // Create a temporary anchor element to trigger download
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = filename;
+      document.body.appendChild(link);
+      link.click();
+      
+      // Clean up
+      document.body.removeChild(link);
+      window.URL.revokeObjectURL(url);
+    } catch (error) {
+      console.error('Erreur lors du téléchargement:', error);
+      // Fallback: open image in new tab
+      window.open(imageUrl, '_blank');
+    }
+  };
+
   return (
     <div className={`min-h-screen transition-colors duration-300 ${
       isDarkMode 
@@ -381,16 +406,13 @@ const Installation = () => {
                   {component.name}
                 </h3>
                 {/* Download Button */}
-                <a 
-                  href={component.image} 
-                  download={`${component.name.replace(/\s+/g, '_')}_diagram.jpg`}
-                  className="block w-full"
+                <Button 
+                  onClick={() => downloadImage(component.image, `${component.name.replace(/\s+/g, '_')}_diagram.jpg`)}
+                  className="w-full bg-secondary hover:bg-secondary/90 text-white text-xs py-2"
                 >
-                  <Button className="w-full bg-secondary hover:bg-secondary/90 text-white text-xs py-2">
-                    <Download className="h-3 w-3 mr-1" />
-                    Télécharger
-                  </Button>
-                </a>
+                  <Download className="h-3 w-3 mr-1" />
+                  Télécharger
+                </Button>
               </div>
             ))}
           </div>
@@ -430,16 +452,13 @@ const Installation = () => {
                   {component.title}
                 </h3>
                 {/* Download Button */}
-                <a 
-                  href={component.image} 
-                  download={`${component.title.replace(/\s+/g, '_')}_diagram.jpg`}
-                  className="block w-full"
+                <Button 
+                  onClick={() => downloadImage(component.image, `${component.title.replace(/\s+/g, '_')}_diagram.jpg`)}
+                  className="w-full bg-accent hover:bg-accent/90 text-white"
                 >
-                  <Button className="w-full bg-accent hover:bg-accent/90 text-white">
-                    <Download className="h-4 w-4 mr-2" />
-                    Télécharger l'image
-                  </Button>
-                </a>
+                  <Download className="h-4 w-4 mr-2" />
+                  Télécharger l'image
+                </Button>
               </div>
             ))}
           </div>
