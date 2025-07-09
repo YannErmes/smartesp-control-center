@@ -215,6 +215,21 @@ const Installation = () => {
           <p className={`text-lg ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>
             Guide étape par étape pour installer et configurer SmartESP
           </p>
+          
+          {/* Download Button */}
+          <div className="mt-8">
+            <a 
+              href="https://github.com/fe-webstore/smartesp-app/releases/latest" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-block"
+            >
+              <Button className="neomorphic bg-primary hover:bg-primary/90 neo-glow text-white px-8 py-4 text-lg">
+                <Download className="h-5 w-5 mr-2" />
+                Télécharger SmartESP APK
+              </Button>
+            </a>
+          </div>
         </div>
 
         {/* Packages à Installer Section */}
