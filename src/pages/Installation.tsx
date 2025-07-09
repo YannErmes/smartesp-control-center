@@ -377,9 +377,20 @@ const Installation = () => {
                     className="w-full h-full object-contain bg-white group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
-                <h3 className="text-sm font-semibold text-center text-gradient-primary group-hover:text-white transition-colors">
+                <h3 className="text-sm font-semibold text-center text-gradient-primary group-hover:text-white transition-colors mb-3">
                   {component.name}
                 </h3>
+                {/* Download Button */}
+                <a 
+                  href={component.image} 
+                  download={`${component.name.replace(/\s+/g, '_')}_diagram.jpg`}
+                  className="block w-full"
+                >
+                  <Button className="w-full bg-secondary hover:bg-secondary/90 text-white text-xs py-2">
+                    <Download className="h-3 w-3 mr-1" />
+                    Télécharger
+                  </Button>
+                </a>
               </div>
             ))}
           </div>
@@ -400,10 +411,9 @@ const Installation = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {components.map((component) => (
-              <a
+              <div
                 key={component.id}
-                href={component.link}
-                className={`neomorphic rounded-xl p-6 hover:neo-glow transition-all duration-300 group cursor-pointer ${
+                className={`neomorphic rounded-xl p-6 hover:neo-glow transition-all duration-300 group ${
                   isDarkMode ? 'bg-[#151515]' : 'bg-white'
                 }`}
               >
@@ -416,10 +426,21 @@ const Installation = () => {
                     className="w-full h-full object-contain bg-white group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
-                <h3 className="text-xl font-semibold text-center text-gradient-primary group-hover:text-white transition-colors">
+                <h3 className="text-xl font-semibold text-center text-gradient-primary group-hover:text-white transition-colors mb-4">
                   {component.title}
                 </h3>
-              </a>
+                {/* Download Button */}
+                <a 
+                  href={component.image} 
+                  download={`${component.title.replace(/\s+/g, '_')}_diagram.jpg`}
+                  className="block w-full"
+                >
+                  <Button className="w-full bg-accent hover:bg-accent/90 text-white">
+                    <Download className="h-4 w-4 mr-2" />
+                    Télécharger l'image
+                  </Button>
+                </a>
+              </div>
             ))}
           </div>
         </div>
