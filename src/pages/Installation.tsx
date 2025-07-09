@@ -353,13 +353,13 @@ const Installation = () => {
                   isDarkMode ? 'bg-[#151515]' : 'bg-white'
                 }`}
               >
-                <div className={`aspect-square rounded-lg overflow-hidden mb-3 border ${
+                <div className={`aspect-[4/3] rounded-lg overflow-hidden mb-3 border ${
                   isDarkMode ? 'border-[#333]' : 'border-gray-200'
                 }`}>
                   <img
                     src={component.image}
                     alt={component.name}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    className="w-full h-full object-contain bg-white group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
                 <h3 className="text-sm font-semibold text-center text-gradient-primary group-hover:text-white transition-colors">
@@ -392,13 +392,13 @@ const Installation = () => {
                   isDarkMode ? 'bg-[#151515]' : 'bg-white'
                 }`}
               >
-                <div className={`aspect-square rounded-lg overflow-hidden mb-4 border ${
+                <div className={`aspect-[4/3] rounded-lg overflow-hidden mb-4 border ${
                   isDarkMode ? 'border-[#333]' : 'border-gray-200'
                 }`}>
                   <img
                     src={component.image}
                     alt={component.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    className="w-full h-full object-contain bg-white group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
                 <h3 className="text-xl font-semibold text-center text-gradient-primary group-hover:text-white transition-colors">
@@ -445,7 +445,7 @@ const Installation = () => {
                   <img
                     src={guide.image}
                     alt={guide.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    className="w-full h-full object-contain bg-white group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
                 <div className="text-center">
