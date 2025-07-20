@@ -55,7 +55,7 @@ const DownloadSection: React.FC = () => {
               </p>
               <Button 
                 className="w-full neomorphic bg-accent hover:bg-accent/90 accent-glow text-white"
-                onClick={() => handleDownload('https://firebasestorage.googleapis.com/v0/b/officialapp-12dd7.appspot.com/o/CH341SER.zip?alt=media&token=cae5ac07-e356-42b2-8c51-3cdbd647db37', 'CH341SER.EXE')}
+                onClick={() => handleDownload('https://github.com/user-attachments/files/21335196/CH341SER.zip', 'CH341SER.EXE')}
               >
                 <Download className="h-4 w-4 mr-2" />
                 Télécharger ESP DRIVER
