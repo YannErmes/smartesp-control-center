@@ -40,7 +40,7 @@ const DownloadSection: React.FC = () => {
               </p>
               <Button 
                 className="w-full neomorphic bg-accent hover:bg-accent/90 accent-glow text-white"
-                onClick={() => handleDownload('https://github.com/fe-webstore/Composant_a_trois_pins?tab=readme-ov-file', 'Smart_ESP_V02.apk')}
+                onClick={() => handleDownload('https://github.com/YannErmes/smartespapp/releases/download/v1.0.0/app-armeabi-v7a-release.apk', 'Smart_ESP_V02.apk')}
               >
                 <Download className="h-4 w-4 mr-2" />
                 Télécharger Smart ESP V0.2
