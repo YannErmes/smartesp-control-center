@@ -40,7 +40,7 @@ const DownloadSection: React.FC = () => {
               </p>
               <Button 
                 className="w-full neomorphic bg-accent hover:bg-accent/90 accent-glow text-white"
-                onClick={() => handleDownload('https://fe-store.pro/appapk/Smart_ESP_V02.apk', 'Smart_ESP_V02.apk')}
+                onClick={() => handleDownload('https://github.com/fe-webstore/Composant_a_trois_pins?tab=readme-ov-file', 'Smart_ESP_V02.apk')}
               >
                 <Download className="h-4 w-4 mr-2" />
                 Télécharger Smart ESP V0.2
@@ -55,7 +55,7 @@ const DownloadSection: React.FC = () => {
               </p>
               <Button 
                 className="w-full neomorphic bg-accent hover:bg-accent/90 accent-glow text-white"
-                onClick={() => handleDownload('https://fe-store.pro/appapk/CH341SER.EXE', 'CH341SER.EXE')}
+                onClick={() => handleDownload('https://firebasestorage.googleapis.com/v0/b/officialapp-12dd7.appspot.com/o/CH341SER.zip?alt=media&token=cae5ac07-e356-42b2-8c51-3cdbd647db37', 'CH341SER.EXE')}
               >
                 <Download className="h-4 w-4 mr-2" />
                 Télécharger ESP DRIVER
