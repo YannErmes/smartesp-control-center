@@ -64,26 +64,7 @@ const DownloadSection: React.FC = () => {
           </div>
 
           {/* Additional download options */}
-          <div className="mb-8">
-            <div className="grid sm:grid-cols-2 gap-4">
-              <Button 
-                variant="outline" 
-                className="neomorphic hover:neo-glow text-gray-200"
-                onClick={() => window.open('https://fe-store.pro/appapk/Smart_ESP_V02.apk', '_blank')}
-              >
-                <ExternalLink className="h-4 w-4 mr-2" />
-                Téléchargement direct APK
-              </Button>
-              <Button 
-                variant="outline" 
-                className="neomorphic hover:neo-glow text-gray-200"
-                onClick={() => window.open('https://fe-store.pro/appapk/CH341SER.EXE', '_blank')}
-              >
-                <ExternalLink className="h-4 w-4 mr-2" />
-                Téléchargement direct Driver
-              </Button>
-            </div>
-          </div>
+        
 
           {/* Community Button */}
           <div className="mb-8">
