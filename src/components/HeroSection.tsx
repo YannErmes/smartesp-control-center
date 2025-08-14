@@ -78,7 +78,7 @@ const HeroSection: React.FC = () => {
               <div className="neomorphic rounded-2xl p-4 bg-[#151515] relative z-10 transform hover:scale-[1.02] transition-transform duration-500">
                 <div className="aspect-[4/3] rounded-xl overflow-hidden border border-[#333] bg-gradient-to-br from-[#0a0a0a] to-[#1a1a1a]">
                   <ImageZoom
-                    src="https://fe-store.pro/smartESPgaleriephoto/Home.png"
+                    src="https://i.postimg.cc/4y37Y3xJ/IMG-20250727-WA0084.jpg"
                     alt="SmartESP Application Screenshot"
                     thumbnailClassName="w-full h-full object-cover"
                   />
